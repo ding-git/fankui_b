@@ -1,0 +1,124 @@
+<%= form_for(@present) do |f| %>
+  <% if @present.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@present.errors.count, "error") %> prohibited this present from being saved:</h2>
+
+      <ul>
+      <% @present.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<table class="main_wrapper">
+	<tbody>
+		<tr>
+			<td>
+				<div class="element" id='new_present'>
+					<div class="input">
+    					<%= f.label '用户名称' %>
+    					<%= f.number_field :user_id  %>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="element"  id='new_present'>
+					<div class="input">
+					    &nbsp;&nbsp;&nbsp;&nbsp;<%= f.label '优先级' %>
+					    <%= f.select :level ,['1','2','3','4','5'] %>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="element" id='new_present'>
+					<div class="input">
+					    <%= f.label '提交日期',:id => 'xwj' %>
+					    <%= f.date_select :request_time %>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="element" id='new_present'>
+					<div class="input">
+					    <%= f.label '问题描述' %><br />
+						<%= f.cktext_area :description, :toolbar => 'Basic', :width => 800, :height => 400 %>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="element" id='new_present'>
+					<div class="input">
+					    <%= f.label '问题原因' %>
+					    <%= f.text_field :cause %>
+						<%= f.select :cause ,['系统原因','其他原因'] %>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="element" id='new_present'>
+					<div class="input">
+					    <%= f.label '解决方案' %>
+					    <%= f.text_field :solution %>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="element" id='new_present'>
+					<div class="input">
+					    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= f.label '备注' %>
+					    <%= f.text_field :note %>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="element" id='new_present'>
+					<div class="input">
+					    <%= f.label '问题类型' %>
+					    <%= f.number_field :question_type %>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
+  <div class="input">
+
+  </div>
+
+<div class="group">
+
+</div>
+
+<div class="group buttons no_header ">
+<table >
+<tbody>
+<tr>
+<td>
+<div class="element">
+<div class="input">
+	<button class="submit ui-submit-button" type="submit">提交</button>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<% end %>

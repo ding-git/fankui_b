@@ -1,0 +1,32 @@
+<%= content_for :bar do %>
+<li class="active">
+	<a href="/">问题反馈</a>
+</li>
+	<li class="active">
+		<%= link_to '问题提交', presents_path %>
+		<span class="notch">
+			<span class="inner">&nbsp;</span>
+		</span>
+	</li>
+<li class="active">
+	<%= link_to '系统管理', '/admin' %>
+</li>
+<% end %>
+
+
+<h1>当前问题</h1>
+
+<table id='current_question'>
+<% @presents.each do |present| %>
+  <tr>
+	<td><%= present.id %></td>
+    <td><%= link_to present.cause, present %></td>
+    <td><%= link_to '编辑', edit_present_path(present) %></td>
+    <td><%= link_to '删除', present, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '提交一个新问题', new_present_path %>

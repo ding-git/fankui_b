@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h1>
+	<b>Cause:</b>
+	<%= @present.cause %>
+  </h1>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @present.user_id %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%= @present.level %>
+</p>
+
+<p>
+  <b>Request time:</b>
+  <%= @present.request_time %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=raw @present.description %>
+</p>
+
+
+
+<p>
+  <b>Solution:</b>
+  <%= @present.solution %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @present.note %>
+</p>
+
+<p>
+  <b>Question type:</b>
+  <%= @present.question_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_present_path(@present) %> |
+<%= link_to 'Back', presents_path %>

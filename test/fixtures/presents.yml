@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  level: 1
+  request_time: 2011-10-18
+  description: 
+  cause: 
+  solution: 
+  note: 
+  question_type: 1
+
+two:
+  user_id: 1
+  level: 1
+  request_time: 2011-10-18
+  description: 
+  cause: 
+  solution: 
+  note: 
+  question_type: 1

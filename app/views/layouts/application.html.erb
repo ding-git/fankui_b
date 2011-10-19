@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= Settings.app_name %></title>
+  <%= stylesheet_link_tag    "/assets/base.css" %>
+<%= javascript_include_tag "/assets/jquery.js" %>
+<%= javascript_include_tag "/assets/jquery_ujs.js" %>
+<%= javascript_include_tag "/javascripts/ckeditor/ckeditor.js" %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+<%= render 'shared/head' %>
+ 
+<div class="content">
+	<div class="inner">
+		<%= yield %>
+	</div>
+	<%= render 'shared/footer' %>
+<div>
+
+</body>
+</html>

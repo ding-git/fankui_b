@@ -1,0 +1,2496 @@
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0 none;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+    vertical-align: baseline;
+}
+:focus {
+    outline: 0 none;
+}
+body {
+    background: none repeat scroll 0 0 white;
+    color: black;
+    line-height: 1;
+}
+ol, ul {
+    list-style: none outside none;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+caption, th, td {
+    font-weight: normal;
+    text-align: left;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+}
+blockquote, q {
+    quotes: "" "";
+}
+.hidden {
+    display: none;
+}
+a:active {
+    outline: 0 none;
+}
+img {
+    image-rendering: optimizequality;
+}
+:focus, *::-moz-focus-inner {
+    border: 0 none;
+    outline: 0 none;
+}
+.clear {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+html {
+    background: none repeat scroll 0 0 #E0ECF6;
+    height: 100%;
+    width: 100%;
+}
+body {
+    background: none repeat scroll 0 0 #E0ECF6;
+    color: #333333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    height: 100%;
+    line-height: 1.3em;
+    width: 100%;
+}
+body h1 {
+    color: #444444;
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    height: 24px;
+    line-height: 24px;
+    margin-bottom: 5px;
+}
+body h2 {
+    color: #444444;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 3px;
+}
+body a {
+    color: #5489BF;
+    text-decoration: none;
+}
+body a:hover {
+    color: #70B6FF;
+}
+body.modal_mask {
+    overflow: hidden;
+}
+.transitionable {
+    z-index: 110 !important;
+}
+.clear {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.borderedp {
+    display: inline-block;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+.borderedp img {
+    margin: -1px -1px -5px;
+    padding: 0;
+    position: relative;
+}
+.borderedp.minip {
+    border-radius: 3px 3px 3px 3px;
+}
+.borderedp.smallp {
+    border-radius: 5px 5px 5px 5px;
+}
+.borderedp.bigp {
+    border-radius: 7px 7px 7px 7px;
+}
+html.rgba .borderedp {
+    background-position: -1px -1px;
+    background-repeat: no-repeat;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+html.rgba .borderedp img {
+    opacity: 0;
+}
+html.no-rgba .borderedp {
+    border: 1px solid #000000;
+}
+html.no-rgba .borderedp img {
+    margin: -1px -1px -5px;
+}
+.clear {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+div.head {
+    -moz-user-select: none;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+div.head {
+	height: 48px;
+	background: #CA0500;
+	background: -moz-linear-gradient(top,#CA0500 0,#950300 100%);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#CA0500),color-stop(100%,#950300));
+	background: -webkit-linear-gradient(top,#CA0500 0,#950300 100%);
+	background: -o-linear-gradient(top,#CA0500 0,#950300 100%);
+	background: -ms-linear-gradient(top,#CA0500 0,#950300 100%);
+	background: linear-gradient(top,#CA0500 0,#950300 100%);
+	-webkit-box-shadow: inset 0 1px 0 #fb0600,inset 0 -1px 0 #680000,0 1px 1px rgba(77,1,0,0.5);
+	-moz-box-shadow: inset 0 1px 0 #fb0600,inset 0 -1px 0 #680000,0 1px 1px rgba(77,1,0,0.5);
+	-ms-box-shadow: inset 0 1px 0 #fb0600,inset 0 -1px 0 #680000,0 1px 1px rgba(77,1,0,0.5);
+	-o-box-shadow: inset 0 1px 0 #fb0600,inset 0 -1px 0 #680000,0 1px 1px rgba(77,1,0,0.5);
+	box-shadow: inset 0 1px 0 #fb0600,inse
+}
+html.no-boxshadow div.head, html.no-cssgradients div.head, body.opera div.head {
+    background: url("http://fav.tv/images/hdr/bck.png") repeat-x scroll left top transparent !important;
+    height: 50px;
+}
+div.head .inner {
+    margin: 0 auto;
+    position: relative;
+    width: 960px;
+}
+div.head a.logo {
+    background: url("http://fav.tv/images/hdr/logo.png") no-repeat scroll center center transparent;
+    display: block;
+    height: 48px;
+    margin-left: 18px;
+    overflow: hidden;
+    text-indent: -200px;
+    width: 70px;
+}
+div.head span.badge {
+    color: white;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: bold;
+    height: 15px;
+    line-height: 15px;
+    padding: 2px 0 4px;
+    position: absolute;
+    right: -3px;
+    top: -5px;
+}
+div.head span.badge span.t {
+    display: block;
+    height: inherit;
+    line-height: inherit;
+}
+html.textshadow.no-rgba div.head span.badge {
+    text-shadow: 0 -1px 0 #AE5352;
+}
+html.textshadow.rgba div.head span.badge {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.35);
+}
+html.no-borderimage div.head span.badge {
+    background: url("http://fav.tv/images/hdr/badge.png") repeat-x scroll left -21px transparent;
+    margin: 0 10px;
+}
+html.no-borderimage div.head span.badge span.c {
+    background: url("http://fav.tv/images/hdr/badge.png") repeat-x scroll left top transparent;
+    height: 21px;
+    position: absolute;
+    top: 0;
+}
+html.no-borderimage div.head span.badge span.c.l {
+    left: -10px;
+    width: 10px;
+}
+html.no-borderimage div.head span.badge span.c.r {
+    background-position: right top;
+    right: -10px;
+    width: 10px;
+}
+html.borderimage div.head span.badge {
+    -moz-border-image: url("http://fav.tv/images/hdr/badge.png") 0 10 21 10 repeat stretch;
+    border-width: 0 10px;
+}
+html.borderimage div.head span.badge span.c {
+    display: none;
+}
+html.borderimage div.head span.badge span.t {
+    margin: 0 -2px;
+}
+ul#mainnav {
+    display: block;
+    height: 29px;
+    left: 108px;
+    position: absolute;
+    top: 10px;
+}
+ul#mainnav span.notch {
+    bottom: -15px;
+    display: none;
+    height: 7px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+ul#mainnav span.notch span.inner {
+    background: url("http://fav.tv/images/hdr_notch.png") no-repeat scroll center center transparent;
+    display: block;
+    height: 7px;
+    margin: 0 auto;
+    width: 24px;
+}
+ul#mainnav li {
+    display: block;
+    float: left;
+    height: 29px;
+    line-height: 29px;
+    margin: 0 5px;
+    position: relative;
+}
+ul#mainnav li a {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    height: 29px;
+    line-height: 29px;
+    padding: 0 12px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+}
+ul#mainnav li.active span.notch {
+    display: block;
+}
+ul#tools {
+    display: block;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+ul#tools > li {
+    float: right;
+    position: relative;
+}
+ul#tools li.search {
+    height: 21px;
+    margin-right: 60px;
+    position: relative;
+    top: 4px;
+}
+ul#tools li.search form {
+    display: block;
+    margin: 0;
+    padding: 0 12px;
+    width: 85px;
+}
+ul#tools li.search form label.icon {
+    display: block;
+    height: 10px;
+    left: 8px;
+    position: absolute;
+    top: 5px;
+    width: 9px;
+}
+html.no-svg ul#tools li.search form label.icon {
+    background: url("http://fav.tv/images/srchicn.png") no-repeat scroll left top transparent;
+}
+html.svg ul#tools li.search form label.icon {
+    -moz-border-image: url("http://fav.tv/images/srchicn.svg") 0 0 0 0 stretch;
+    border-width: 10px 0 0 9px;
+    margin-left: -9px;
+    margin-top: -10px;
+}
+ul#tools li.search form input {
+    -moz-appearance: none;
+    -moz-user-select: text;
+    background-color: transparent;
+    border: 0 none;
+    color: white;
+    display: block;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    height: 14px;
+    left: 20px;
+    line-height: 14px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+    top: 3px;
+    width: 77px;
+}
+html.no-boxshadow ul#tools li.search, html.no-borderradius ul#tools li.search {
+    background: url("http://fav.tv/images/srchbox.png") no-repeat scroll left top transparent;
+    padding-bottom: 1px;
+}
+html.boxshadow.borderradius ul#tools li.search {
+    background-color: #A20000;
+    background-image: none;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 1px 0 #D70000, 0 1px 2px #7C0000 inset;
+    float: right !important;
+}
+html.boxshadow.borderradius ul#tools li.search form, html.boxshadow.borderradius ul#tools li.search form div {
+    background-image: none;
+}
+ul#tools li.user {
+    -moz-user-select: none;
+    margin-left: 15px;
+}
+ul#tools li.user.open span.indicator {
+    background-position: -189px -16px;
+}
+ul#tools li.user.open ul.menu {
+    display: block !important;
+}
+ul#tools li.user.hover {
+    cursor: pointer;
+}
+ul#tools a.avatar {
+    display: block;
+    float: left;
+    height: 25px;
+    overflow: hidden;
+    padding: 1px;
+    position: relative;
+    width: 25px;
+}
+ul#tools a.avatar span.mask {
+    background: url("http://fav.tv/images/usersprite.png") no-repeat scroll -223px -16px transparent;
+    display: block;
+    height: 27px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 27px;
+}
+ul#tools a.name {
+    color: white;
+    display: block;
+    float: left;
+    font-size: 11pt;
+    font-weight: bold;
+    height: 27px;
+    line-height: 27px;
+    margin-left: 10px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+ul#tools span.indicator {
+    background: url("http://fav.tv/images/usersprite.png") no-repeat scroll -206px -16px transparent;
+    display: block;
+    float: left;
+    height: 24px;
+    margin-left: 3px;
+    margin-top: 4px;
+    width: 17px;
+}
+ul#tools span.indicator:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+ul#tools ul.menu {
+    background: url("http://fav.tv/images/usersprite.png") repeat-y scroll left top transparent;
+    cursor: default;
+    display: none;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 36px;
+    width: 189px;
+}
+ul#tools ul.menu li {
+    display: block;
+    word-wrap: break-word;
+}
+ul#tools ul.menu li.link {
+    height: 17px;
+    line-height: 17px;
+    padding-left: 15px;
+}
+ul#tools ul.menu li.link a {
+    color: #303030;
+    display: block;
+    font-weight: bold;
+    width: auto;
+}
+ul#tools ul.menu li.link a:hover {
+    color: #2B5AAE;
+}
+ul#tools ul.menu li.divider {
+    -moz-user-select: none;
+    border-bottom: 1px solid #E0E0E0;
+    height: 9px;
+    margin-bottom: 9px;
+    margin-left: 2px;
+    width: 185px;
+}
+ul#tools ul.menu li.logged_in_as {
+    color: #8C8C8C;
+    font-size: 90%;
+    padding: 5px 15px 2px;
+}
+ul#tools ul.menu li.top, ul#tools ul.menu li.btm {
+    -moz-user-select: none;
+    background: url("http://fav.tv/images/usersprite.png") no-repeat scroll -189px 0 transparent;
+    height: 8px;
+    left: 0;
+    position: absolute;
+    width: 189px;
+}
+ul#tools ul.menu li.top {
+    top: -8px;
+}
+ul#tools ul.menu li.btm {
+    background-position: -189px -8px;
+    bottom: -8px;
+}
+ul#tools ul.user {
+    display: block;
+    height: 29px;
+    position: absolute;
+    right: 0;
+    top: 15.5px;
+}
+ul#tools ul.user li {
+    float: right;
+    height: 29px;
+    line-height: 29px;
+    margin: 0 5px;
+}
+ul#tools li.notifications {
+    text-shadow: none;
+}
+ul#tools li.notifications * {
+    text-shadow: none;
+}
+ul#tools li.notifications a.indicator {
+    -moz-transition: left 0.2s linear 0s;
+    display: block;
+    height: 23px;
+    position: relative;
+    top: 3px;
+    width: 23px;
+}
+ul#tools li.notifications a.indicator span.icon {
+    background: url("http://fav.tv/images/hdr/notifications_icon.png") no-repeat scroll right top transparent;
+    display: block;
+    height: inherit;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: inherit;
+}
+ul#tools li.notifications a.indicator span.icon.unread {
+    -moz-transition: opacity 0.2s ease-in 0s;
+    background-position: left top;
+    opacity: 0;
+}
+html.no-opacity ul#tools li.notifications a.indicator span.icon.unread {
+    visibility: hidden;
+}
+ul#tools li.notifications a.indicator span.icon.unread span.badge {
+    right: -13px;
+    top: -8px;
+}
+ul#tools li.notifications a.indicator span.icon.read {
+    -moz-transition: opacity 0.2s ease-out 0s;
+}
+ul#tools li.notifications a.indicator.unread {
+    left: -6px;
+}
+ul#tools li.notifications a.indicator.unread span.icon.read {
+    opacity: 0;
+}
+html.no-opacity ul#tools li.notifications a.indicator.unread span.icon.read {
+    visibility: hidden;
+}
+ul#tools li.notifications a.indicator.unread span.icon.unread {
+    opacity: 1;
+}
+html.no-opacity ul#tools li.notifications a.indicator.unread span.icon.unread {
+    visibility: visible;
+}
+ul#tools li.notifications a.indicator.unread + #notifications_menu {
+    margin-left: -6px;
+}
+ul#tools li.auth ul li {
+    display: block;
+    float: left;
+    height: 29px;
+    line-height: 29px;
+    margin: 0 9px;
+}
+ul#tools li.auth ul li a {
+    color: white;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+#notifications_menu {
+    -moz-transition: margin 0.2s linear 0s;
+    display: none;
+    left: -169px;
+    margin: 0;
+    padding: 0 3px;
+    position: absolute;
+    top: 30px;
+    width: 354px;
+}
+html.csstransforms.csstransitions #notifications_menu {
+    -moz-transform: scale(0) translateY(-60px);
+    -moz-transform-origin: center top;
+    -moz-transition: -moz-transform 0.3s ease-out 0s, opacity 0.3s ease-out 0s;
+    display: block;
+    opacity: 0;
+}
+html.no-csstransforms.csstransitions #notifications_menu {
+    display: block;
+    opacity: 0;
+    top: -5000px !important;
+}
+#notifications_menu.open {
+    display: block;
+}
+html.csstransforms.csstransitions #notifications_menu.open {
+    -moz-transform: scale(1) translateY(0pt);
+    opacity: 1;
+}
+html.no-csstransforms.csstransitions #notifications_menu.open {
+    opacity: 1;
+    top: 30px !important;
+}
+#notifications_menu li.tabs {
+    margin: 0;
+    padding: 0;
+}
+#notifications_menu li.tabs ul {
+    border-bottom: 1px solid #E2E2E2;
+    height: 41px;
+    margin-top: -6px;
+    padding-left: 2px;
+    white-space: nowrap;
+    width: 352px;
+}
+#notifications_menu li.tabs ul li {
+    display: inline-block;
+    height: 41px;
+    line-height: 41px;
+}
+#notifications_menu li.tabs ul li a {
+    color: #979797;
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    height: inherit;
+    padding: 0 15px;
+}
+#notifications_menu li.tabs ul li a:hover {
+    color: #373737;
+}
+#notifications_menu li.tabs ul li a em {
+    background: url("http://fav.tv/images/hdr/notifications_titles.png") no-repeat scroll left top transparent;
+    display: inline-block;
+    height: 15px;
+    margin-right: 3px;
+    position: relative;
+    top: 4px;
+    width: 15px;
+}
+#notifications_menu li.tabs ul li.active a {
+    color: #8BB342;
+    cursor: default;
+}
+#notifications_menu li.tabs ul li.notif em {
+    background-position: left -15px;
+}
+#notifications_menu li.tabs ul li.notif a:hover em {
+    background-position: left top;
+}
+#notifications_menu li.tabs ul li.notif.active em {
+    background-position: left -30px !important;
+}
+#notifications_menu li.tabs ul li.req em {
+    background-position: -16px -15px;
+}
+#notifications_menu li.tabs ul li.req a:hover em {
+    background-position: -16px top;
+}
+#notifications_menu li.tabs ul li.req.active em {
+    background-position: -16px -30px !important;
+}
+#notifications_menu li.tabs ul li.msg em {
+    background-position: -33px -15px;
+}
+#notifications_menu li.tabs ul li.msg a:hover em {
+    background-position: -33px top;
+}
+#notifications_menu li.tabs ul li.msg.active em {
+    background-position: -33px -30px !important;
+}
+#notifications_menu li.tabs ul li.msg em {
+    margin-right: 5px;
+}
+#notifications_menu li.tab {
+    display: none;
+    position: relative;
+}
+#notifications_menu li.tab ul {
+    width: 354px;
+}
+#notifications_menu li.tab ul li {
+    -moz-transition: background 0.2s ease-in 0s, border 0.2s ease-in 0s;
+    background-color: white;
+    border-bottom: 1px solid #E2E2E2;
+    border-top: 1px solid white;
+    display: table;
+    padding: 8px 0;
+    width: 354px;
+}
+#notifications_menu li.tab ul li.new {
+    background-color: #FBF9E6;
+    border-color: #FDFBE4 transparent #E3E1CC;
+}
+#notifications_menu li.tab ul li.clickable:hover {
+    background-color: #F7FFE7;
+    border-color: #FAFFF0 transparent #D0D9C1;
+    cursor: pointer;
+}
+#notifications_menu li.tab ul li span.avatar {
+    display: table-cell;
+    padding-left: 8px;
+    vertical-align: top;
+    width: 38px;
+}
+#notifications_menu li.tab ul li span.avatar span.borderedp {
+    border-radius: 3px 3px 3px 3px;
+}
+#notifications_menu li.tab ul li span.avatar span.borderedp img {
+    height: 38px;
+    width: 38px;
+}
+html.rgba #notifications_menu li.tab ul li span.avatar span.borderedp {
+    border-color: rgba(0, 0, 0, 0.25);
+}
+#notifications_menu li.tab ul li span.body {
+    color: #7B7B7B;
+    display: table-cell;
+    line-height: 16px;
+    padding-left: 8px;
+    vertical-align: middle;
+    width: 292px;
+}
+#notifications_menu li.tab ul li span.body span.subject {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    padding-bottom: 2px;
+}
+#notifications_menu li.tab ul li span.body span.text {
+    display: block;
+    font-size: 13px;
+}
+#notifications_menu li.tab ul li span.body span.text b.user, #notifications_menu li.tab ul li span.body span.text b.context {
+    color: #618320;
+    font-weight: bold;
+}
+#notifications_menu li.tab ul li span.body em.sent {
+    display: none;
+}
+#notifications_menu li.tab ul li span.body span.time, #notifications_menu li.tab ul li span.body span.details {
+    display: block;
+    font-size: 11px;
+}
+#notifications_menu li.tab ul li span.buttons {
+    display: table-cell;
+    white-space: nowrap;
+}
+#notifications_menu li.tab ul li span.buttons a.button {
+    border-radius: 3px 3px 3px 3px;
+    display: inline-block;
+    font-weight: bold;
+    height: 21px;
+    line-height: 21px;
+    margin-right: 5px;
+    padding: 0 5px;
+}
+#notifications_menu li.tab ul li span.buttons a.accept {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #91B945 0pt, #6F902F 100%) repeat scroll 0 0 transparent;
+    border-color: #7FA537 #7FA537 #425817;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 0 #D1D1D1;
+    color: white;
+}
+#notifications_menu li.tab ul li span.buttons a.accept span {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+}
+#notifications_menu li.tab ul li span.buttons a.accept:active {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #6F902F 0pt, #91B945 100%) repeat scroll 0 0 transparent;
+    border-color: #425817 #607E27 #7FA537;
+    border-style: solid;
+    border-width: 1px;
+}
+#notifications_menu li.tab ul li span.buttons a.reject {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #DADADA 0pt, #A6A6A6 100%) repeat scroll 0 0 transparent;
+    border-color: #B8B8B8 #B8B8B8 #787878;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 0 #D1D1D1;
+    color: white;
+}
+#notifications_menu li.tab ul li span.buttons a.reject span {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+}
+#notifications_menu li.tab ul li span.buttons a.reject:active {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #A6A6A6 0pt, #DADADA 100%) repeat scroll 0 0 transparent;
+    border-color: #787878 #989898 #B8B8B8;
+    border-style: solid;
+    border-width: 1px;
+}
+#notifications_menu li.tab ul li:last-child {
+    border-bottom: 0 none;
+}
+#notifications_menu li.tab.active {
+    display: block;
+}
+#notifications_menu li.tab span.nodata {
+    display: block;
+    padding: 25px 0;
+    text-align: center;
+}
+#notifications_menu li.more {
+    background-color: transparent;
+    margin-bottom: -3px;
+}
+#notifications_menu li.more a {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #DBDBDB 0pt, #A5A5A5 100%) repeat scroll 0 0 transparent;
+    border-color: #B8B8B8 #B8B8B8 #767676;
+    border-radius: 3px 3px 3px 3px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 0 #D1D1D1;
+    color: #313131;
+    display: block;
+    font-weight: bold;
+    height: 26px;
+    line-height: 26px;
+    margin: 0 auto;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+    width: 170px;
+}
+#notifications_menu li.more a:active {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #A5A5A5 0pt, #DBDBDB 100%) repeat scroll 0 0 transparent;
+    border-color: #767676 #979797 #B8B8B8;
+    border-style: solid;
+    border-width: 1px;
+}
+#notifications_menu li.loading {
+    background: url("http://fav.tv/images/loading-animation.gif") no-repeat scroll center center transparent;
+    padding: 15px 0;
+}
+#notifications_menu span.t {
+    display: inline-block;
+    height: inherit;
+    line-height: inherit;
+    margin: 0 -2px;
+}
+html.textshadow.no-rgba #notifications_menu {
+    text-shadow: 0 -1px 0 #AE5352;
+}
+html.textshadow.rgba #notifications_menu {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.35);
+}
+html.borderimage #notifications_menu {
+    -moz-border-image: url("http://fav.tv/images/hdr/notifications_bck.png") 20 360 9 0 stretch;
+    border-width: 20px 0 9px;
+}
+html.borderimage #notifications_menu span.edge {
+    display: none;
+}
+html.no-borderimage #notifications_menu {
+    background: url("http://fav.tv/images/hdr/notifications_bck.png") repeat-y scroll right top transparent;
+    margin: 20px 0 9px;
+}
+html.no-borderimage #notifications_menu li.edge {
+    background: url("http://fav.tv/images/hdr/notifications_bck.png") repeat-x scroll left top transparent;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+html.no-borderimage #notifications_menu li.edge.t {
+    height: 20px;
+    top: -20px;
+}
+html.no-borderimage #notifications_menu li.edge.b {
+    background-position: left bottom;
+    bottom: -9px;
+    height: 9px;
+}
+#gsearch_results {
+    background: none repeat scroll 0 0 white;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.5);
+    display: none;
+    left: -96px;
+    position: absolute;
+    top: 30px;
+    width: 300px;
+}
+#gsearch_results.expanded {
+    display: block;
+}
+#gsearch_results ul {
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    margin: 3px;
+    width: 294px;
+}
+#gsearch_results li.result {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #F9FAFB;
+    border-color: -moz-use-text-color #B8BEC6 #E3E3E3;
+    border-left: 1px solid #B8BEC6;
+    border-right: 1px solid #B8BEC6;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+    cursor: pointer;
+    display: table;
+    padding: 6px;
+}
+#gsearch_results li.result:last-child {
+    border-bottom-color: #B8BEC6;
+}
+#gsearch_results li.result > span {
+    display: table-cell;
+    vertical-align: middle;
+    width: 0;
+}
+#gsearch_results li.result > span:first-child {
+    vertical-align: top;
+}
+#gsearch_results li.result span.image span {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3) inset;
+    display: block;
+    height: 25px;
+    margin-right: 5px;
+    width: 25px;
+}
+#gsearch_results li.result span.image span img {
+    height: 25px;
+    opacity: 0;
+}
+#gsearch_results li.result span.contents {
+    width: 100%;
+}
+#gsearch_results li.result span.contents.has_subtitle span.title {
+    margin-top: -2px;
+}
+#gsearch_results li.result span.contents span {
+    display: block;
+}
+#gsearch_results li.result span.contents span.title {
+    font-size: 13px;
+    font-weight: bold;
+}
+#gsearch_results li.result span.contents span.subtitle {
+    color: #7F7D7D;
+    font-size: 11px;
+}
+#gsearch_results li.result.user {
+    margin: 0;
+}
+#gsearch_results li.result.user span.title {
+    color: #74A259;
+}
+#gsearch_results li.result.show span.title {
+    color: #AF110C;
+}
+#gsearch_results li.result span.accessory {
+    background: url("http://fav.tv/images/srchacc.png") no-repeat scroll left center transparent;
+    padding: 0 5px;
+}
+#gsearch_results li.result.selected {
+    background: none repeat scroll 0 0 #1A53C4;
+    border-color: #194599;
+    box-shadow: 0 1px 0 #194599 inset, 0 2px 0 #2CAEFD inset;
+    color: white;
+}
+html.cssgradients #gsearch_results li.result.selected {
+    background: -moz-linear-gradient(center top , #2489FB 0pt, #193F86 100%) repeat scroll 0 0 transparent;
+}
+#gsearch_results li.result.selected * {
+    color: white !important;
+}
+#gsearch_results li.result.selected span.image span {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.65);
+}
+#gsearch_results li.result.selected span.accessory {
+    background-position: right center;
+}
+#gsearch_results li.header {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #BAC1C9;
+    border-color: #9CA5AE #929AA3 #899199;
+    border-style: solid;
+    border-width: 1px;
+    color: #40494D;
+    font-size: 13px;
+    font-weight: bold;
+    height: 27px;
+    line-height: 27px;
+    text-indent: 10px;
+}
+html.cssgradients #gsearch_results li.header {
+    background: -moz-linear-gradient(center top , #EBEEF1 0pt, #ABB3BC 100%) repeat scroll 0 0 transparent;
+}
+html.boxshadow #gsearch_results li.header {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+#gsearch_results li.header a.more {
+    color: #556166;
+    float: right;
+    font-size: 11px;
+    margin-right: 10px;
+}
+#gsearch_results li:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+#gsearch_results li:last-child {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+#gsearch_results span.arrow {
+    background: none repeat scroll 0 0 transparent;
+    color: white;
+    display: block;
+    height: 10px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    top: -10px;
+    width: 100%;
+}
+#gsearch_results span.arrow span.iarrow {
+    color: inherit;
+    display: block;
+    font-size: 25px;
+    height: 25px;
+    left: 0;
+    line-height: 25px;
+    position: absolute;
+    text-align: center;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    top: -5px;
+    width: 100%;
+}
+body.gecko #gsearch_results span.arrow span.iarrow {
+    font-size: 20px;
+    height: 20px;
+    line-height: 20px;
+    top: 0;
+}
+html.csstransforms.csstransitions #gsearch_results {
+    -moz-transform: scale(0) translateY(-60px);
+    -moz-transform-origin: center top;
+    -moz-transition: -moz-transform 0.3s ease-out 0s, opacity 0.3s ease-out 0s;
+    display: block;
+    opacity: 0;
+}
+html.no-csstransforms.csstransitions #gsearch_results {
+    display: block;
+    opacity: 0;
+    top: -5000px !important;
+}
+#gsearch_results.expanded {
+    display: block;
+}
+html.csstransforms.csstransitions #gsearch_results.expanded {
+    -moz-transform: scale(1) translateY(0pt);
+    opacity: 1;
+}
+html.no-csstransforms.csstransitions #gsearch_results.expanded {
+    opacity: 1;
+    top: 30px !important;
+}
+.clear {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+#push {
+    position: fixed;
+    right: 10px;
+    top: 60px;
+    width: 300px;
+    z-index: 100;
+}
+#push div.pushed {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -moz-user-select: none;
+    background: -moz-linear-gradient(center top , #6E6E6E 0pt, #2B2B2B 100%) repeat scroll 0 0 transparent;
+    border-color: #404040 #404040 #2B2B2B;
+    border-radius: 5px 5px 5px 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 #979797 inset, 0 0 5px 0 rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+#push div.pushed span.inner {
+    display: table;
+}
+#push div.pushed span.inner span.image {
+    display: table-cell;
+    vertical-align: top;
+}
+#push div.pushed span.inner span.image img {
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+#push div.pushed span.inner span.body {
+    color: white;
+    display: table-cell;
+    font-size: 14px;
+    padding-left: 10px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+#push div.pushed span.inner span.body b.user {
+    color: #BEDC87 !important;
+    font-weight: bold;
+}
+#push div.pushed span.inner span.body b.context {
+    font-weight: bold;
+}
+.clear {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+div.content {
+    margin: 0 auto;
+    position: relative;
+    width: 960px;
+}
+div.content div.inner {
+    background-color: white;
+    border: 1px solid #CDD9E2;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 69px 20px 20px;
+    position: relative;
+    width: auto;
+}
+div.content div.inner {
+    border-color: white;
+    box-shadow: 0 1px 2px #959DA4;
+    background-color: white;
+    border: 1px solid #CDD9E2;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 69px 20px 20px;
+    position: relative;
+    width: auto;
+}
+
+div.content div.inner div.columns {
+}
+div.content div.inner div.columns div.left {
+    float: left;
+}
+div.content div.inner div.columns div.right {
+    float: right;
+}
+div.content div.inner div.columns div.small {
+    width: 231px;
+}
+div.content div.inner div.columns div.big {
+    width: 660px;
+}
+div.content div.inner div.columns:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+div.content div.inner div#nofavs {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 5;
+}
+div.content div.inner div#nofavs a {
+    color: #191C2C;
+}
+div.content div.inner ul.notifications {
+    border-bottom: 1px solid #C3C3C3;
+    margin-bottom: 21px;
+    padding: 0 0 8px;
+}
+div.content div.inner ul.notifications li {
+    border-left: 1px solid #B6B6B6;
+    border-radius: 1px 1px 1px 1px;
+    float: left;
+    height: 18px;
+    line-height: 18px;
+    margin-left: 11px;
+    padding-left: 11px;
+}
+div.content div.inner ul.notifications li a {
+    color: #9E9E9E;
+    font-size: 9pt;
+    font-weight: bold;
+}
+div.content div.inner ul.notifications li a:hover {
+    color: #AD0404 !important;
+}
+div.content div.inner ul.notifications li.on a {
+    color: #454444;
+}
+div.content div.inner ul.notifications li:first-child {
+    border-left: medium none;
+    margin-left: 0;
+    padding-left: 0;
+}
+div.content div.inner ul.notifications li span.icon {
+    background: url("http://fav.tv/images/notif_icons.png") no-repeat scroll left top transparent;
+    display: inline-block;
+    height: 18px;
+    margin-right: 4px;
+    width: 17px;
+}
+div.content div.inner ul.notifications li.friends span.icon {
+    background-position: -4px -24px;
+}
+div.content div.inner ul.notifications li.friends.on span.icon {
+    background-position: -4px -3px;
+}
+div.content div.inner ul.notifications li.messages span.icon {
+    background-position: -64px -24px;
+}
+div.content div.inner ul.notifications li.messages.on span.icon {
+    background-position: -64px -3px;
+}
+div.content div.inner ul.notifications li.comments span.icon {
+    background-position: -32px -24px;
+}
+div.content div.inner ul.notifications li.comments.on span.icon {
+    background-position: -32px -3px;
+}
+div.content div.inner ul.notifications div.action_note {
+    margin-bottom: 20px;
+}
+div.content div.inner ul.notifications div.action_note h1 {
+    color: #282828;
+    font-size: 18px;
+    font-weight: normal;
+}
+div.content div.inner ul.notifications div.action_note span {
+    color: #727272;
+    font-size: 13px;
+    line-height: 19px;
+}
+div.content div.inner ul.notifications:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+div.action_note {
+    margin-bottom: 20px;
+}
+div.action_note h1 {
+    color: #282828;
+    font-size: 18px;
+    font-weight: normal;
+}
+div.action_note span {
+    color: #727272;
+    font-size: 13px;
+    line-height: 19px;
+}
+div.nocontent {
+    padding: 60px 40px;
+    text-align: center;
+}
+div.nocontent h4 {
+    color: #8E8D8D !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    line-height: 26px;
+}
+div.nocontent p {
+    color: #ADADAD !important;
+    font-size: 14px !important;
+    line-height: 22px;
+}
+.clear {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+div.pagination.buttons {
+    border-top: 1px solid #C3C3C3;
+    height: 30px;
+    margin-top: 21px;
+    padding-top: 20px;
+    position: relative;
+    text-align: center;
+}
+div.pagination.buttons a, div.pagination.buttons span {
+    color: #8B8B8B;
+    font-size: 15px;
+    padding: 0 10px;
+}
+div.pagination.buttons a:hover {
+    color: #585858;
+}
+div.pagination.buttons span.current {
+    color: #A20002;
+    font-weight: bold;
+}
+div.pagination.buttons span.ellipsis {
+    padding: 0;
+}
+div.pagination.buttons a.button {
+    background: url("http://fav.tv/images/btn_pagination.png") repeat-x scroll left top transparent;
+    border: 1px solid #A4A4A4;
+    border-radius: 3px 3px 3px 3px;
+    color: #303030;
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    height: 30px;
+    left: 0;
+    line-height: 30px;
+    padding: 0 15px;
+    position: absolute;
+    text-shadow: 0 1px 0 white;
+    top: 20px;
+}
+div.pagination.buttons a.button:hover {
+    background-position: left -46px;
+}
+div.pagination.buttons a.button:active {
+    background-position: left -92px;
+}
+div.pagination.buttons a.button.next {
+    left: auto;
+    right: 0;
+}
+.clear {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+div.footer {
+    padding: 17px 20px;
+}
+div.footer ul {
+}
+div.footer ul li {
+    border-left: 1px solid #A09EA1;
+    display: block;
+    float: left;
+    padding: 0 15px;
+}
+div.footer ul li a {
+    color: #3A3B3F;
+    font-weight: bold;
+    text-shadow: 0 1px 0 white;
+}
+div.footer ul li a:hover {
+    text-decoration: underline;
+}
+div.footer ul li.first {
+    border-left: medium none;
+    padding-left: 0;
+}
+div.footer ul:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+div.footer ul.legal {
+    color: #545557;
+    display: block;
+    font-size: 12px;
+    margin-top: 8px;
+    text-shadow: 0 1px 0 white;
+}
+div.footer ul.legal li {
+    border-color: #CAD5DE;
+    padding: 0 8px;
+}
+div.footer ul.legal li a {
+    color: #656668;
+    font-weight: normal;
+}
+div.footer ul.legal li:first-child {
+    border-left: medium none;
+    padding-left: 0;
+}
+.clear {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+div.modal_window {
+    display: none;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 110;
+}
+div.modal_window div.modal_overlay {
+    background: none repeat scroll 0 0 black;
+    height: 100%;
+    left: 0;
+    opacity: 0.45;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+div.modal_window div.modal_prompt {
+    background-color: #E5E5E5;
+    border: 4px solid #626262;
+    border-radius: 3px 3px 3px 3px;
+    margin: 0 auto;
+    padding: 3px;
+    position: relative;
+    top: 30%;
+    width: 394px;
+}
+html.boxshadow div.modal_window div.modal_prompt {
+    border: 0 none;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.8), 0 0 0 4px rgba(0, 0, 0, 0.3);
+}
+html.boxshadow div.modal_window div.modal_prompt h2 {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+html.csstransitions div.modal_window div.modal_overlay {
+    opacity: 0;
+}
+html.csstransitions div.modal_window div.modal_prompt {
+    -moz-transition: margin 0.25s ease-in-out 0s, opacity 0.25s ease-in-out 0s;
+    margin-top: -200px;
+    opacity: 0;
+}
+html.csstransitions div.modal_window.appear div.modal_prompt {
+    margin-top: 0;
+    opacity: 1;
+}
+html.csstransitions div.modal_window.appear div.modal_overlay {
+    opacity: 0.45;
+}
+html.csstransitions div.modal_window.disappear div.modal_overlay {
+    opacity: 0;
+}
+html.csstransitions div.modal_window.disappear.confirmed div.modal_prompt {
+    margin-top: -200px;
+    opacity: 0;
+}
+html.csstransitions div.modal_window.disappear.cancelled div.modal_prompt {
+    margin-top: 200px;
+    opacity: 0;
+}
+.clear {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+div.confirm_prompt div.modal_prompt {
+    padding-top: 0;
+}
+div.confirm_prompt h2 {
+    background: none repeat scroll 0 0 #F2F2F2;
+    border-bottom: 1px solid #CACACA;
+    color: #333333;
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 0;
+    margin-left: -3px;
+    text-align: left;
+    text-indent: 15px;
+    text-shadow: 0 1px 0 white;
+    width: 400px;
+}
+html.cssgradients div.confirm_prompt h2 {
+    background: -moz-linear-gradient(center top , white 0pt, #E5E5E5 100%) repeat scroll 0 0 transparent;
+}
+div.confirm_prompt p {
+    background-color: white;
+    display: block;
+    margin: 0;
+}
+div.confirm_prompt p span.c {
+    color: #575757;
+    display: block;
+    font-size: 15px;
+    line-height: 21px;
+    padding: 15px 8px;
+    text-align: center;
+}
+div.confirm_prompt ul.footer {
+    background: none repeat scroll 0 0 white;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top: 1px solid #E5E5E5;
+    display: block;
+    height: 42px;
+    margin: 0;
+}
+div.confirm_prompt ul.footer li {
+    float: right;
+}
+div.confirm_prompt ul.footer li.confirm a.button {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("http://fav.tv/images/btns/submit.png") repeat-x scroll left top transparent;
+    border-color: #7DA42F #5D7D20 #405712;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 #C2C2C2;
+    color: white;
+    display: block;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    height: 23px;
+    line-height: 23px;
+    padding: 0 11px;
+    text-shadow: 0 -1px 0 #6C8F2F;
+}
+div.confirm_prompt ul.footer li.confirm a.button:hover {
+    cursor: pointer;
+}
+div.confirm_prompt ul.footer li.confirm a.button:active {
+    background-position: left -23px;
+    border-color: #405712 #5D7D20 #7DA42F;
+}
+div.confirm_prompt ul.footer li.confirm a.button:focus {
+    outline: 0 none;
+}
+div.confirm_prompt ul.footer li.confirm a.button[disabled], div.confirm_prompt ul.footer li.confirm a.button.disabled {
+    background-position: left bottom;
+    border-color: #AFAFAF;
+    color: #B2B2B2;
+    cursor: default;
+    text-shadow: 0 1px 0 white;
+}
+div.confirm_prompt ul.footer li.remove a.button {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("http://fav.tv/images/btns/remove.png") repeat-x scroll left top transparent;
+    border-color: #D73D36 #982724 #621515;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 #C2C2C2;
+    color: white;
+    display: block;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    height: 23px;
+    line-height: 23px;
+    padding: 0 11px;
+    text-shadow: 0 -1px 0 #692424;
+}
+div.confirm_prompt ul.footer li.remove a.button:hover {
+    cursor: pointer;
+}
+div.confirm_prompt ul.footer li.remove a.button:active {
+    background-position: left -23px;
+    border-color: #621515 #982724 #D73D36;
+}
+div.confirm_prompt ul.footer li.remove a.button:focus {
+    outline: 0 none;
+}
+div.confirm_prompt ul.footer li.remove a.button[disabled], div.confirm_prompt ul.footer li.remove a.button.disabled {
+    background-position: left bottom;
+    border-color: #AFAFAF;
+    color: #B2B2B2;
+    cursor: default;
+    text-shadow: 0 1px 0 white;
+}
+div.confirm_prompt ul.footer li.cancel a.button {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("http://fav.tv/images/btns/cancel.png") repeat-x scroll left top transparent;
+    border-color: #D4D4D4 #B6B6B6 #909090;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 #E5E5E5;
+    color: #7C7C7C;
+    display: block;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    height: 23px;
+    line-height: 23px;
+    padding: 0 11px;
+    text-shadow: 0 -1px 0 white;
+}
+div.confirm_prompt ul.footer li.cancel a.button:hover {
+    cursor: pointer;
+}
+div.confirm_prompt ul.footer li.cancel a.button:active {
+    background-position: left -23px;
+    border-color: #909090 #B6B6B6 #D4D4D4;
+}
+div.confirm_prompt ul.footer li.cancel a.button:focus {
+    outline: 0 none;
+}
+div.confirm_prompt ul.footer li.cancel a.button[disabled], div.confirm_prompt ul.footer li.cancel a.button.disabled {
+    background-position: left bottom;
+    border-color: #AFAFAF;
+    color: #B2B2B2;
+    cursor: default;
+    text-shadow: 0 1px 0 white;
+}
+div.confirm_prompt ul.footer li a.button {
+    height: 23px !important;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+.clear {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.login_prompt .modal_prompt {
+    width: 499px !important;
+}
+.login_prompt div.inner {
+    background-color: white;
+    border-radius: 3px 3px 3px 3px;
+    display: table;
+    height: 198px;
+    position: relative;
+}
+.login_prompt div.inner:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.login_prompt div.inner a.close {
+    border-bottom: 1px solid #E9E9E9;
+    color: #A4A4A4;
+    font-size: 11px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 5;
+}
+.login_prompt div.inner a.close:hover {
+    color: #717171;
+}
+.login_prompt div.inner span.column {
+    display: table-cell;
+    padding: 0 15px;
+    vertical-align: middle;
+    width: 50%;
+}
+.login_prompt div.inner span.column h3 {
+    color: #333333;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 17px;
+    margin-bottom: 14px;
+    text-align: center;
+}
+.login_prompt div.inner span.signup {
+    background: url("http://fav.tv/images/authmodal/bck.png") no-repeat scroll center bottom transparent;
+}
+.login_prompt div.inner span.signup h3 {
+    font-size: 13px;
+    height: 50px;
+    line-height: 17px;
+    margin-top: -10px;
+}
+.login_prompt div.inner span.signup a.create {
+    background: url("http://fav.tv/images/authmodal/btn_create.png") no-repeat scroll center top transparent;
+    color: transparent;
+    display: block;
+    font-size: 1px;
+    height: 47px;
+    margin: 0 auto;
+    text-indent: -800px;
+    width: 189px;
+}
+.login_prompt div.inner span.signup a.create:active {
+    background-position: center bottom;
+}
+.login_prompt div.inner span.dvdr {
+    background: none repeat scroll 0 0 #E5E5E5;
+    display: block;
+    height: 100%;
+    left: 249px;
+    position: absolute;
+    top: 0;
+    width: 1px;
+}
+.login_prompt div.element {
+    margin-bottom: 11px;
+    position: relative;
+}
+.login_prompt div.element div.input > label {
+    left: 0;
+    position: absolute;
+    text-indent: 3px;
+    top: 0;
+}
+.login_prompt div.element div.input > label span.required {
+    display: none;
+}
+.login_prompt div.element input, .login_prompt div.element div.input > label {
+    color: #737373;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    height: 16px;
+    line-height: 16px;
+    padding: 7px 10px;
+}
+.login_prompt div.element div.input > label {
+    color: #ABABAB;
+}
+.login_prompt div.element input:-moz-placeholder {
+    color: #ABABAB;
+}
+.login_prompt div.element input {
+    -moz-appearance: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -moz-transition: border 0.2s linear 0s, color 0.2s linear 0s, background 0.2s linear 0s;
+    background-color: white;
+    border-color: #9F9F9F #B0B0B0 #C1C1C1;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 #D8D8D8 inset, 0 1px 0 white;
+    color: #696969;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 194px !important;
+}
+html.cssgradients .login_prompt div.element input {
+    background: -moz-linear-gradient(center top , #ECECEC 0pt, white 20%) repeat scroll 0 0 transparent;
+}
+html.no-cssgradients .login_prompt div.element input {
+    background: url("http://fav.tv/images/../forms/bck.png") repeat-x scroll left top white;
+}
+.login_prompt div.element input:focus {
+    background: -moz-linear-gradient(center top , white 0pt, white 100%) repeat scroll 0 0 white;
+    border-color: #4CA4FF;
+    box-shadow: 0 0 7px rgba(84, 148, 255, 0.6);
+    color: black;
+    outline: 0 none;
+}
+.login_prompt div.element button.submit {
+    box-shadow: 0 1px 0 #CCCCCC;
+    float: right;
+}
+.login_prompt div.element a.forgot {
+    color: #AAAAAA;
+    display: block;
+    float: left;
+    font-size: 11px;
+    height: 25px;
+    line-height: 25px;
+}
+.clear {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+div.popover {
+    background-color: black;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
+    position: relative;
+    text-align: left;
+}
+html.rgba div.popover {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+div.popover span.arrow {
+    background-color: transparent;
+    color: black;
+    display: block;
+    height: 7px;
+    left: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+html.rgba div.popover span.arrow {
+    color: rgba(0, 0, 0, 0.55);
+}
+div.popover span.arrow span.iarrow {
+    font-size: 25px;
+    height: 25px;
+    left: 0;
+    line-height: 25px;
+    position: absolute;
+    width: 100%;
+}
+div.popover.top span.arrow {
+    top: -7px;
+}
+html.textshadow.rgba div.popover.top span.arrow {
+    text-shadow: 0 -1px 2px rgba(0, 0, 0, 0.45);
+}
+div.popover.top span.arrow span.iarrow {
+    bottom: -10px;
+}
+body.gecko div.popover.top span.arrow span.iarrow {
+    bottom: auto;
+    top: -3px;
+}
+div.popover.btm span.arrow {
+    bottom: -7px;
+}
+html.textshadow.rgba div.popover.btm span.arrow {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+div.popover.btm span.arrow span.iarrow {
+    bottom: -3px;
+}
+div.popover span.shine {
+    display: block;
+    position: absolute;
+    width: 100%;
+}
+div.popover span.shine span {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    display: block;
+    height: 20px;
+    margin: 2px;
+    width: auto;
+}
+html.cssgradients.rgba div.popover span.shine span {
+    background-image: -moz-linear-gradient(center bottom , rgba(255, 255, 255, 0) 0pt, rgba(255, 255, 255, 0.2) 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+div.popover span.contents {
+    display: block;
+    padding: 10px;
+}
+div.popover span.contents h3 {
+    border: 0 none;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    height: auto;
+    line-height: 15px;
+    margin: 0 0 5px;
+    padding: 0;
+}
+div.popover span.contents p {
+    color: #E5E5E5;
+    font-size: 11px;
+    text-shadow: 0 -1px 0 black;
+}
+html.rgba div.popover span.contents p {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
+}
+div.popover.lowkey {
+    border: 1px solid black;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.1) inset, 0 1px 1px 0 rgba(255, 255, 255, 0.2) inset;
+}
+div.popover.lowkey span.shine {
+    display: none;
+}
+div.popover.lowkey span.arrow {
+    color: black !important;
+}
+.clear {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+a.btn_follow {
+    -moz-transition: opacity 0.2s linear 0s;
+    background: url("http://fav.tv/images/btn_fav.png") no-repeat scroll right bottom transparent;
+    color: white;
+    display: block;
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+    text-shadow: 0 1px 0 black;
+}
+a.btn_follow span {
+    color: white;
+    display: block;
+    margin-right: 10px;
+    padding-left: 15px;
+    padding-right: 5px;
+}
+a.btn_follow:hover {
+    background-position: right -48px;
+}
+a.btn_follow:hover span {
+    background-position: left top;
+}
+a.btn_follow.light {
+    background-image: url("http://fav.tv/images/btn_fav_light.png");
+    text-shadow: 0 1px 0 white;
+}
+a.btn_follow.light span {
+    background-image: url("http://fav.tv/images/btn_fav_light.png");
+    color: #787878;
+}
+a.btn_follow.light:hover span {
+    color: #5C6F77;
+}
+a.btn_follow.unfollow {
+    opacity: 0.5;
+}
+a.btn_follow.unfollow:hover {
+    opacity: 1;
+}
+.clear {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+ul.segmented {
+    display: block;
+}
+ul.segmented li {
+    float: left;
+}
+ul.segmented li a {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("http://fav.tv/images/segmented_sprite.png") repeat-x scroll left -28px transparent;
+    border-color: #BFBFBF;
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+    color: #929292;
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+    text-shadow: 0 1px 0 white;
+}
+ul.segmented li a:hover {
+    background-position: left -56px;
+    border-color: #B9CED9;
+    color: #6B7980;
+}
+ul.segmented li.active a {
+    background-position: left top;
+    border-color: #A5A5A5;
+    color: #565656;
+    cursor: default;
+}
+ul.segmented li.first a {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+ul.segmented li.last a {
+    border-bottom-right-radius: 5px;
+    border-right-width: 1px;
+    border-top-right-radius: 5px;
+}
+ul.segmented:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+ul.content_actions li.content_action_bar ul.segmented {
+    padding-right: 6px;
+    padding-top: 6px;
+}
+ul.content_actions li.content_action_bar ul.segmented li {
+    border: medium none !important;
+}
+ul.content_actions li.content_action_bar ul.segmented li a {
+    height: 28px !important;
+    line-height: 28px !important;
+}
+.clear {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+div.notification {
+    background: url("http://fav.tv/images/notifications_bck.png") repeat-x scroll left top transparent;
+    border: 1px solid transparent;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 5px #CCCCCC;
+    height: 34px;
+    line-height: 34px;
+    margin: 0;
+    padding: 0;
+}
+div.notification div.inner {
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    width: auto;
+}
+div.notification div.inner span.icon {
+    display: none;
+}
+div.notification.success {
+    background-color: #62972F;
+    background-position: left top;
+    border-color: #537E26;
+}
+div.notification.success div.inner {
+    text-shadow: 0 1px 0 #446E1E;
+}
+div.notification.error {
+    background-color: #A20002;
+    background-position: left -64px;
+    border-color: #8A0001;
+}
+div.notification.error div.inner {
+    text-shadow: 0 1px 0 #7B0100;
+}
+div.notification.general {
+    background-color: #C5CCD4;
+    background-position: left -128px;
+    border-color: #A7AEB4;
+}
+div.notification.general div.inner {
+    color: #3B3C40;
+    text-shadow: 0 1px 0 #D3D8DE;
+}
+div.global_notification {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+}
+div.global_notification div.notification {
+    box-shadow: 0 0 5px #555555;
+    margin: 0 auto;
+    padding: 7px 0;
+    width: 940px;
+}
+div.global_notification div.notification.btm {
+    border-bottom: 0 none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+div.global_notification div.notification.top {
+    border-top: 0 none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+a.show {
+    color: #C10000 !important;
+}
+a.show:hover {
+    color: #9F0000 !important;
+}
+.breadcrumbs, .breadcrumb {
+    display: none;
+}
+.clear {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.ui-button, button.ui-submit-button, a.ui-submit-button, span.ui-submit-button, .ui-cancel-button, .ui-more-button {
+    border: 1px solid;
+    border-radius: 4px 4px 4px 4px;
+    display: inline-block;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 11px;
+    text-align: center;
+}
+body.webkit .ui-button, body.webkit button.ui-submit-button, body.webkit a.ui-submit-button, body.webkit span.ui-submit-button, body.webkit .ui-cancel-button, body.webkit .ui-more-button {
+    line-height: 23px;
+}
+.ui-button:hover, button.ui-submit-button:hover, a.ui-submit-button:hover, span.ui-submit-button:hover, .ui-cancel-button:hover, .ui-more-button:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+.ui-button:focus, button.ui-submit-button:focus, a.ui-submit-button:focus, span.ui-submit-button:focus, .ui-cancel-button:focus, .ui-more-button:focus {
+    outline: 0 none;
+}
+.ui-button[disabled], button.ui-submit-button[disabled], a.ui-submit-button[disabled], span.ui-submit-button[disabled], .ui-cancel-button[disabled], .ui-more-button[disabled], .ui-button.disabled, button.disabled.ui-submit-button, a.disabled.ui-submit-button, span.disabled.ui-submit-button, .disabled.ui-cancel-button, .disabled.ui-more-button {
+    cursor: default;
+    opacity: 0.45;
+}
+button.ui-submit-button, a.ui-submit-button, span.ui-submit-button {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("http://fav.tv/images/btns/submit.png") repeat-x scroll left top transparent;
+    border-color: #7DA42F #7DA42F #405712;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 #C2C2C2;
+    color: white;
+    text-shadow: 0 -1px 0 #6C8F2F;
+}
+button.ui-submit-button:active, a.ui-submit-button:active, span.ui-submit-button:active {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-position: left -23px;
+    border-color: #405712 #5E7D20 #7DA42F;
+    border-style: solid;
+    border-width: 1px;
+}
+.ui-cancel-button {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("http://fav.tv/images/btns/cancel.png") repeat-x scroll left top transparent;
+    border-color: #D4D4D4 #D4D4D4 #909090;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 #D4D4D4;
+    color: #7C7C7C;
+    text-shadow: 0 -1px 0 white;
+}
+.ui-cancel-button:active {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-position: left -23px;
+    border-color: #909090 #909A90 #7DA42F;
+    border-style: solid;
+    border-width: 1px;
+}
+.ui-more-button {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #F3F3F3 0pt, #DFDFDF 100%) repeat scroll 0 0 transparent;
+    border-color: #CACACA #CACACA #A0A0A0;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 #E5E5E5, 0 1px 0 white inset;
+    color: #5A5A5A;
+    height: 25px;
+    line-height: 25px;
+    text-shadow: 0 1px 0 #F0F0F0;
+}
+.ui-more-button:hover {
+    color: #5A5A5A;
+}
+.ui-more-button:active {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #DFDFDF 0pt, #F3F3F3 100%) repeat scroll 0 0 transparent;
+    border-color: #A0A0A0 #B5B5B5 #CACACA;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 #E5E5E5, 0 1px 0 #E8E8E8 inset;
+}
+.ui-follow-button {
+    background: url("http://fav.tv/images/ui/btn_follow.png") repeat-x scroll left top transparent;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px #ADE048 inset, 0 1px 1px rgba(0, 0, 0, 0.8);
+    color: white;
+    display: block;
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    height: 23px;
+    line-height: 23px;
+    margin: 1px;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    width: 85px;
+}
+body.gecko .ui-follow-button {
+    line-height: 21px;
+}
+.ui-follow-button:hover {
+    background-position: left -46px;
+    box-shadow: 0 1px #E0FF69 inset, 0 1px 1px rgba(0, 0, 0, 0.8);
+    color: white;
+}
+.ui-follow-button:active {
+    background-position: left -23px;
+    box-shadow: 0 1px #88B733 inset, 0 1px 1px rgba(0, 0, 0, 0.8);
+}
+.ui-follow-button.unfollow {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-position: left -69px;
+    border-color: #1F2122 #242628 #2A2B2E;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 #383B40 inset, 0 1px 0 #3D4348;
+    color: #858A93;
+    margin: 0;
+}
+.ui-follow-button.unfollow:hover {
+    background-position: left -92px;
+    box-shadow: 0 1px 0 #44484D inset, 0 1px 0 #3D4348;
+    color: #B7BDC7;
+}
+.ui-follow-button.unfollow:active {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-position: left -115px;
+    border-color: #2A2B2E #2A2B2E #1F2122;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 #3D4348;
+}
+.ui-follow-button.light {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #7CAA24 #7CAA24 #517016;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px #ADE048 inset, 0 1px 0 #C7D1B7;
+}
+.ui-follow-button.light:hover {
+    background-position: left -46px;
+    box-shadow: 0 1px #E0FF69 inset, 0 1px 0 #C7D1B7;
+    color: white;
+}
+.ui-follow-button.light:active {
+    background-position: left -23px;
+    box-shadow: 0 1px #88B733 inset, 0 1px 0 #C7D1B7;
+}
+.ui-follow-button.light.unfollow {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-position: left -138px;
+    border-color: #A9A9A9 #B9B9B9 #CACACA;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 #CBCBCB inset;
+    color: #8C8C8C;
+    opacity: 0.7;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+.ui-follow-button.light.unfollow:hover {
+    background-position: left -161px;
+    box-shadow: 0 1px 0 #DADADA inset;
+    color: #757575;
+    opacity: 1;
+}
+.ui-follow-button.light.unfollow:active {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-position: left -184px;
+    border-color: #CBCBCB #CBCBCB #AAAAAA;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 #EDEDED inset;
+}
+.ui-section-title {
+    border-bottom: 1px solid #D2D2D2;
+    color: #282828;
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    height: 15px;
+    line-height: 15px;
+    margin-bottom: 11px;
+    padding: 2px 0 9px;
+}
+.ui-section-title a {
+    color: #282828;
+}
+.ui-section-title a:hover {
+    color: black;
+}
+.ui-section-title .accessory {
+    color: #990300;
+    float: right;
+    font-size: 13px;
+    font-weight: bold;
+}
+.ui-section-title .accessory:hover {
+    color: #AA1411;
+}
+.clear {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+div.notice {
+    background: url("http://fav.tv/images/notifications_bck.png") repeat-x scroll left top transparent;
+    border: 1px solid transparent;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 5px #CCCCCC;
+    height: 34px;
+    line-height: 34px;
+    margin: 0;
+    padding: 0;
+}
+div.notice div {
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    width: auto;
+}
+div.notice div h4 {
+    display: none;
+}
+div.notice div span.icon {
+    display: none;
+}
+div.notice.success {
+    background-color: #62972F;
+    background-position: left top;
+    border-color: #537E26;
+}
+div.notice.success div {
+    text-shadow: 0 1px 0 #446E1E;
+}
+div.notice.error {
+    background-color: #A20002;
+    background-position: left -64px;
+    border-color: #8A0001;
+}
+div.notice.error div {
+    text-shadow: 0 1px 0 #7B0100;
+}
+div.notice.general {
+    background-color: #C5CCD4;
+    background-position: left -128px;
+    border-color: #A7AEB4;
+}
+div.notice.general div {
+    color: #3B3C40;
+    text-shadow: 0 1px 0 #D3D8DE;
+}
+
+
+html.cssgradients form.new_present div.element input {
+    background: -moz-linear-gradient(center top , #ECECEC 0pt, white 56%) repeat scroll 0 0 transparent;
+}
+
+form.new_present div.element input {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -moz-transition: border 0.2s linear 0s, color 0.2s linear 0s, background 0.2s linear 0s;
+    background-color: white;
+    border-color: #9F9F9F #B0B0B0 #C1C1C1;
+    border-radius: 5px 5px 5px 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 0 4px 0 #C2C2C2, 0 1px 0 #D8D8D8 inset;
+    width: 220px;
+}
+
+form.new_present div.element input, form.formation div.element div.input > label {
+    color: #737373;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    height: 16px;
+    line-height: 16px;
+	margin-left:15px;
+    padding: 7px 10px;
+}
+
+div.group.buttons {
+    border-top: 1px solid #D8D8D8;
+    margin-top: 31px !important;
+    padding-top: 23px;
+    width: 100%;
+}
+
+#new_present {
+    padding: 5px;
+}
+
+#current_question td{
+	padding: 5px;
+}

@@ -1,0 +1,16 @@
+# config/settings.yml
+default: &defaults
+  app_name: "产品反馈系统"
+  copyright_name: "Copyright &copy; 2011 Ding code"
+  allow_register: true
+
+
+development:
+  <<: *defaults
+
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

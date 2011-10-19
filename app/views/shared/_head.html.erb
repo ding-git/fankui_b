@@ -1,0 +1,31 @@
+<div class="head">
+	<div class="inner">
+		<a class="logo" href="/">fav.tv</a>
+		<ul id="mainnav">
+			<%= yield :bar %>
+		</ul>
+		<ul id="tools">
+			<li class="auth">
+				<ul>
+					<% if user_signed_in? -%> <!-- Provided by devise -->
+					<li>
+					  <%= link_to '用户信息', edit_user_registration_path %>
+					</li>
+					<li>
+					  <%= link_to '退出登录', destroy_user_session_path, :method => :delete %>
+					</li>
+					<% else %>
+					<div style="float:right">
+					<li>
+					  <%= link_to '注册', new_user_registration_path %>
+					</li>
+					<li>
+					  <%= link_to '登录', new_user_session_path %>
+					</li>
+					</div>
+					<% end -%>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>

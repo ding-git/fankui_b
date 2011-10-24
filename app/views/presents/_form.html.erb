@@ -59,7 +59,7 @@
 					<div class="input">
 					    <%= f.label '问题原因' %>
 					    <%= f.text_field :cause %>
-						<%= f.select :cause ,['系统原因','其他原因'] %>
+						<%= f.select :cause ,{'系统原因' => '1', '其他原因' => '2'} %>
 					</div>
 				</div>
 			</td>
@@ -90,6 +90,16 @@
 					<div class="input">
 					    <%= f.label '问题类型' %>
 					    <%= f.number_field :question_type %>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="element" id='new_present'>
+					<div class="input">
+					    <%= f.label :fileatt %>
+					    <%= f.file_field :fileatt %>
 					</div>
 				</div>
 			</td>

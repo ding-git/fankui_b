@@ -12,3 +12,131 @@
 	<%= link_to '系统管理', '/admin' %>
 </li>
 <% end %>
+
+
+<div class="actions_wrapper">
+<ul class="content_actions">
+项目概述
+</ul>
+<ul class="content_bctions">
+
+	<table>
+		<tr>
+			<td>
+				
+				<div id="orders_chart" style="width: 400px; height: 300px;"></div>
+				
+			</td>
+			
+			<td>
+				<div id="noteX">
+			
+					
+					<table>
+						<tr>
+							<td>
+								当前全部事件数
+							</td>
+							<td>
+								<b><%= link_to @presents.count,'/' %></b>
+								
+							</td>
+						</tr>
+						<tr>
+							<td>
+								已完成
+							</td>
+							<td>
+								<%= link_to '2','/' %>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							未完成
+							</td>
+							<td>
+								<%= link_to '4','/' %>
+							</td>
+						</tr>
+					</table>
+					
+				</div>
+				
+			</td>
+			
+		</tr>
+		
+	</table>
+	
+	<table class="pretty">
+	  <!-- Orders table code here -->
+	</table>
+
+
+
+	<script type="text/javascript" charset="utf-8">
+	$(function () {
+	  new Highcharts.Chart({
+	    chart: { renderTo: 'orders_chart' },
+	    title: { text: '已完成项目统计' },
+	    xAxis: { type: 'datetime' },
+	    yAxis: {
+	      title: { text: 'Dollars'}
+	    },
+
+	    tooltip: {
+	       formatter: function() {
+	          return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
+	       }
+	    },
+	    series: [{
+		type: 'pie',
+	      data: [['已完成 - 90%', 90],['未完成 - 10%',10]]
+	    }]
+	  });
+	});
+	</script>
+
+</ul>
+
+
+</div>
+
+<br>
+
+<div class="actions_wrapper">
+
+	<ul class="content_actions">
+		项目历史
+	</ul>
+	<ul class="content_bctions">
+		<table>
+			<tr>
+				<td></td>
+				<td>优先级</td>
+				<td>项目类型</td>		
+				<td>项目名称</td>
+				<td>项目时间</td>
+				<td>问题原因</td>
+				<td>解决方案</td>
+			</tr>
+
+				<% @presents.each do |present| %>
+			<tr>
+				<td><%= '已解决' if present.resolve %></td>
+				<td><%= present.level %></td>
+				<td><%= present.question_type %></td>		
+				<td></td>
+				<td></td>
+				<td><%= present.cause %></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			    <td><%= link_to '编辑', edit_present_path(present) %></td>
+			    <td><%= link_to '删除', present, confirm: 'Are you sure?', method: :delete %></td>
+			    <td><%= link_to '下载附件', present.fileatt.to_s if present.fileatt.to_s %></td>
+			</tr>
+				<% end %>
+		</table>
+	</ul>
+</div>

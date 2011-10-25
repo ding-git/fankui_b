@@ -9,6 +9,12 @@ FankuiB::Application.routes.draw do
 
   root :to => "home#index"
 
+  resources :home, :path => "t" do
+    collection do
+      get :index
+    end
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

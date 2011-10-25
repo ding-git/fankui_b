@@ -98,8 +98,18 @@
 			<td>
 				<div class="element" id='new_present'>
 					<div class="input">
-					    <%= f.label :fileatt %>
+					    <%= f.label :fileatt %>s
 					    <%= f.file_field :fileatt %>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="element" id='new_present'>
+					<div class="input">
+					    <%= f.label '问题状态' %>
+					<%= f.check_box :resolve %>
 					</div>
 				</div>
 			</td>

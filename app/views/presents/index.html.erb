@@ -8,10 +8,61 @@
 			<span class="inner">&nbsp;</span>
 		</span>
 	</li>
+	<li class="active">
+		<%= link_to '日志', '/admin' %>
+	</li>
 <li class="active">
-	<%= link_to '系统管理', '/admin' %>
+	<%= link_to '管理', '/admin' %>
 </li>
 <% end %>
+
+
+
+
+<div id="orders_chart" style="width: 400px; height: 300px;"></div>
+<div id="orders_chart2" style="width: 400px; height: 300px;"></div>
+
+<table class="pretty">
+  <!-- Orders table code here -->
+</table>
+
+
+<script type="text/javascript" charset="utf-8">
+$(function () {
+  new Highcharts.Chart({
+    chart: { renderTo: 'orders_chart' },
+    title: { text: '已完成项目统计' },
+    xAxis: { type: 'datetime' },
+    yAxis: {
+      title: { text: 'Dollars'}
+    },
+
+    tooltip: {
+       formatter: function() {
+          return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
+       }
+    },
+    series: [{
+	type: 'pie',
+      data: [['已完成 - 90%', 90],['未完成 - 10%',10]]
+    }]
+  });
+
+	new Highcharts.Chart({
+    chart: { renderTo: 'orders_chart2' },
+    title: { text: '问题解决数量' },
+    xAxis: { categories: ['1月1日', '1月2日', '1月3日', '1月4日', '1月5日', 'Jun', 
+       'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] },
+    yAxis: {
+      title: { text: '笔数'}
+    },
+    series: [{
+      data: [1, 2, 9, 4, 2]
+    }]
+  });
+});
+</script>
+
 
 
 <h1>当前问题</h1>

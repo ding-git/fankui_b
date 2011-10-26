@@ -2586,3 +2586,12 @@ font-size: 14px;
 table tr td{
 	padding: 10px;
 }
+
+p{
+	margin-bottom: 10px;
+}
+
+p b{
+	color: blue;
+	margin-right: 50px;
+}

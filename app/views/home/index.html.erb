@@ -113,27 +113,22 @@
 		<table>
 			<tr>
 				<td></td>
-				<td>优先级</td>
-				<td>项目类型</td>		
-				<td>项目名称</td>
+				<td>优先</td>
+				<td>标题</td>
+				<td>项目类型</td>
 				<td>项目时间</td>
 				<td>问题原因</td>
-				<td>解决方案</td>
 			</tr>
 
 				<% @presents.each do |present| %>
 			<tr>
 				<td><%= '已解决' if present.resolve %></td>
-				<td><%= present.level %></td>
-				<td><%= present.question_type %></td>		
-				<td></td>
-				<td></td>
-				<td><%= present.cause %></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td><%= present.level_s %></td>
+				<td><%= link_to present.title, present_path(present) %></td>
+				<td><%= present.type %></td>		
+				<td><%= present.created_at.to_date %></td>
+				<td><%= present.cause_s %></td>
 			    <td><%= link_to '编辑', edit_present_path(present) %></td>
-			    <td><%= link_to '删除', present, confirm: 'Are you sure?', method: :delete %></td>
 			    <td><%= link_to '下载附件', present.fileatt.to_s if present.fileatt.to_s %></td>
 			</tr>
 				<% end %>

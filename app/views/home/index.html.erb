@@ -47,7 +47,7 @@
 								已完成
 							</td>
 							<td>
-								<%= link_to '2','/' %>
+								<%= link_to @completed_count,'/' %>
 							</td>
 						</tr>
 						<tr>
@@ -55,7 +55,7 @@
 							未完成
 							</td>
 							<td>
-								<%= link_to '4','/' %>
+								<%= link_to @undone_count,'/' %>
 							</td>
 						</tr>
 					</table>
@@ -91,7 +91,7 @@
 	    },
 	    series: [{
 		type: 'pie',
-	      data: [['已完成 - 90%', 90],['未完成 - 10%',10]]
+	      data: [['已完成 - <%= @completed_count %>', <%= @completed_count %>],['未完成 - <%= @undone_count %>',<%= @undone_count %>]]
 	    }]
 	  });
 	});

@@ -1,5 +1,8 @@
 # coding: utf-8
 class Present < ActiveRecord::Base
+  
+    has_many :review
+    
     mount_uploader :fileatt, FileattUploader
     
     

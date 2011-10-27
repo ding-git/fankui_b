@@ -1,23 +1,4 @@
-<%= content_for :bar do %>
-<li class="active">
-	<a href="/">问题反馈</a>
-</li>
-	<li class="active">
-		<%= link_to '问题提交', presents_path %>
-		<span class="notch">
-			<span class="inner">&nbsp;</span>
-		</span>
-	</li>
-	<li class="active">
-		<%= link_to '日志', '/admin' %>
-	</li>
-<li class="active">
-	<%= link_to '管理', '/admin' %>
-</li>
-<% end %>
-
-
-
+<%= render 'present_bar' %>
 
 <div id="orders_chart" style="width: 400px; height: 300px;"></div>
 <div id="orders_chart2" style="width: 400px; height: 300px;"></div>

@@ -1,3 +1,5 @@
+<%= render 'present_bar' %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -75,6 +77,24 @@
 >
 <p>
   <b>评论:</b>
+
+	<div class='pinglun'>
+		
+		<% if @present.review != [] %>
+		
+		<% @present.review.each do |review| %>
+		<%= review.content %></br>
+		</br>
+		由 <%= review.user.email %> 发布. <%= review.created_at.to_date %>
+		<% end %>
+		
+		<% else %>
+		
+		暂时还没有评论
+		
+		<% end %>
+		
+	</div>
 </p>
 
 <%= link_to '编辑', edit_present_path(@present) %> |

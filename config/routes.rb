@@ -1,4 +1,6 @@
 FankuiB::Application.routes.draw do
+  resources :reviews
+
   resources :presents
 
   ActiveAdmin.routes(self)

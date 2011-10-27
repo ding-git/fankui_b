@@ -182,7 +182,7 @@ div.head .inner {
     width: 960px;
 }
 div.head a.logo {
-    background: url("http://fav.tv/images/hdr/logo.png") no-repeat scroll center center transparent;
+    background: url("/images/logo.png") no-repeat scroll center center transparent;
     display: block;
     height: 48px;
     margin-left: 18px;
@@ -2594,4 +2594,10 @@ p{
 p b{
 	color: blue;
 	margin-right: 50px;
+}
+
+.pinglun {
+	width: 600px;
+	background-color: #EFEFEF;
+	padding: 5px;
 }

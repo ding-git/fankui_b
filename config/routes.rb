@@ -1,4 +1,6 @@
 FankuiB::Application.routes.draw do
+  get "search/index"
+
   resources :reviews
 
   resources :presents

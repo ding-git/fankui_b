@@ -115,16 +115,16 @@
 				<td></td>
 				<td>优先</td>
 				<td>标题</td>
-				<td>项目类型</td>
-				<td>项目时间</td>
-				<td>问题原因</td>
+				<td>产品类型</td>
+				<td>时间</td>
+				<td>原因</td>
 			</tr>
 
 				<% @presents.each do |present| %>
 			<tr>
 				<td><%= '已解决' if present.resolve %></td>
 				<td><%= present.level_s %></td>
-				<td><%= link_to present.title, present_path(present) %></td>
+				<td><%= link_to truncate(present.title,:length => 40), present_path(present) %></td>
 				<td><%= present.type %></td>		
 				<td><%= present.created_at.to_date %></td>
 				<td><%= present.cause_s %></td>

@@ -173,7 +173,7 @@ div.head {
 	box-shadow: inset 0 1px 0 #fb0600,inse
 }
 html.no-boxshadow div.head, html.no-cssgradients div.head, body.opera div.head {
-    background: url("http://fav.tv/images/hdr/bck.png") repeat-x scroll left top transparent !important;
+    background: url("/images/hdr/bck.png") repeat-x scroll left top transparent !important;
     height: 50px;
 }
 div.head .inner {
@@ -316,7 +316,7 @@ ul#tools li.search form label.icon {
     width: 9px;
 }
 ul#tools li.search form label.icon {
-    background: url("http://fav.tv/images/srchicn.png") no-repeat scroll left top transparent;
+    background: url("/images/srchicn.png") no-repeat scroll left top transparent;
     border-width: 10px 0 0 9px;
     margin-left: 0px;
     margin-top: 0px;
@@ -342,7 +342,7 @@ ul#tools li.search form input {
     width: 77px;
 }
 ul#tools li.search, ul#tools li.search {
-    background: url("http://fav.tv/images/srchbox.png") no-repeat scroll left top transparent;
+    background: url("/images/srchbox.png") no-repeat scroll left top transparent;
     padding-bottom: 1px;
 }
 html.boxshadow.borderradius ul#tools li.search {
@@ -2557,7 +2557,7 @@ ul.content_actions {
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
-    background: url("http://fav.tv/images/actions_bck.png") repeat-x scroll left 1px transparent;
+    background: url("/images/actions_bck.png") repeat-x scroll left 1px transparent;
     border-color: #B7B7B7 #B7B7B7 #9D9D9D;
     border-style: solid;
     border-top-left-radius: 5px;
@@ -2593,7 +2593,6 @@ p{
 
 p b{
 	color: blue;
-	margin-right: 50px;
 }
 
 .pinglun {
@@ -2601,3 +2600,14 @@ p b{
 	background-color: #EFEFEF;
 	padding: 5px;
 }
+
+.prsn_title p b{
+	width: 500px;
+	color: red;
+}
+
+
+#container {width:850px;margin:0 auto;}
+#container div div{padding: 15px;}
+#sidebar { float:left; width:100px; text-align:   right; color: blue; font-size:14px;}
+#content { }

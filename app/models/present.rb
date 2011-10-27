@@ -19,9 +19,9 @@ class Present < ActiveRecord::Base
     def cause_s
       case self.cause
             when '1'
-              return 'wwwf'
+              return '用户设置问题'
             when '2'
-              return 'zzzc'
+              return '其他'
             else
               return self.cause
             end
@@ -30,7 +30,7 @@ class Present < ActiveRecord::Base
     def type
       case self.question_type
             when 1
-              return '系统问题'
+              return 'Internet Explorer'
             else
               return nil
             end

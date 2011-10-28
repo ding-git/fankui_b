@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :present_id %><br />
-    <%= f.number_field :present_id %>
+    <%= f.label :present_id %>
+    <%= f.number_field :present_id, :value => params[:present] %>
   </div>
   <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
+    <%= f.label :user_id %>
+    <%= f.number_field :user_id,:value => current_user.id %>
   </div>
   <div class="field">
     <%= f.label :content %><br />

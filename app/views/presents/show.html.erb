@@ -84,6 +84,11 @@
 
 					<% end %>
 				</div>
+				
+				<div>
+					<%= link_to '新增',new_review_path(:present => params[:id]),:remote => true %>
+					<div id='edit_window'></div>
+				</div>
 	</div>
 	<div>
 		<div>

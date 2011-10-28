@@ -1,7 +1,14 @@
 <%= render 'present_bar' %>
 
-<div id="orders_chart" style="width: 400px; height: 300px;"></div>
-<div id="orders_chart2" style="width: 400px; height: 300px;"></div>
+
+
+<p>
+	<%= link_to '全部', presents_path %> |
+	<%= link_to '已完成', presents_path(:resolve => 'true') %> |
+	<%= link_to '未完成', presents_path(:resolve => 'false') %>
+</p>
+
+<div id="orders_chart2" style="width: 800px; height: 300px;"></div>
 
 <table class="pretty">
   <!-- Orders table code here -->
@@ -10,35 +17,25 @@
 
 <script type="text/javascript" charset="utf-8">
 $(function () {
-  new Highcharts.Chart({
-    chart: { renderTo: 'orders_chart' },
-    title: { text: '已完成项目统计' },
-    xAxis: { type: 'datetime' },
-    yAxis: {
-      title: { text: 'Dollars'}
-    },
-
-    tooltip: {
-       formatter: function() {
-          return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
-       }
-    },
-    series: [{
-	type: 'pie',
-      data: [['已完成 - 90%', 90],['未完成 - 10%',10]]
-    }]
-  });
 
 	new Highcharts.Chart({
     chart: { renderTo: 'orders_chart2' },
     title: { text: '问题解决数量' },
-    xAxis: { categories: ['1月1日', '1月2日', '1月3日', '1月4日', '1月5日', 'Jun', 
-       'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] },
+    xAxis: { categories: [
+	
+		<% @time.each do |timeday| %>
+			'<%= timeday %>',
+		<% end %>
+						  ] },
     yAxis: {
       title: { text: '笔数'}
     },
     series: [{
-      data: [1, 2, 9, 4, 2]
+      data: [
+				<% @case.each do |caseday| %>
+					<%= caseday %>,
+				<% end %>
+			]
     }]
   });
 });
@@ -46,20 +43,38 @@ $(function () {
 
 
 
-<h1>当前问题</h1>
+<div class="actions_wrapper">
 
-<table id='current_question'>
-<% @presents.each do |present| %>
-  <tr>
-	<td><%= present.id %></td>
-    <td><%= link_to present.cause, present %></td>
-    <td><%= link_to '编辑', edit_present_path(present) %></td>
-    <td><%= link_to '删除', present, confirm: 'Are you sure?', method: :delete %></td>
-    <td><%= link_to '下载附件', present.fileatt.to_s if present.fileatt.to_s %></td>
-  </tr>
-<% end %>
-</table>
+	<ul class="content_actions">
+		项目历史</br>
+	</ul>
+	<ul class="content_bctions">
+		<table>
+			<tr>
+				<td></td>
+				<td>优先</td>
+				<td>标题</td>
+				<td>产品类型</td>
+				<td>时间</td>
+				<td>原因</td>
+			</tr>
 
-<br />
+				<% @presents.each do |present| %>
+			<tr>
+				<td><%= '已解决' if present.resolve %></td>
+				<td><%= present.level_s %></td>
+				<td><%= link_to truncate(present.title,:length => 40), present_path(present) %></td>
+				<td><%= present.type %></td>		
+				<td><%= present.created_at.to_date %></td>
+				<td><%= present.cause_s %></td>
+			    <td><%= link_to '编辑', edit_present_path(present) %></td>
+			    <td><%= link_to '下载附件', present.fileatt.to_s if present.fileatt.to_s %></td>
+			</tr>
+				<% end %>
+		</table>
+	</ul>
+</div>
+</br>
+
 
 <%= link_to '提交一个新问题', new_present_path %>

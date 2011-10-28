@@ -38,7 +38,7 @@
 								当前全部事件数
 							</td>
 							<td>
-								<b><%= link_to @presents.count,'/' %></b>
+								<b><%= link_to @completed_count+@undone_count,presents_path %></b>
 								
 							</td>
 						</tr>
@@ -47,7 +47,7 @@
 								已完成
 							</td>
 							<td>
-								<%= link_to @completed_count,'/' %>
+								<%= link_to @completed_count, presents_path(:resolve => 'true') %>
 							</td>
 						</tr>
 						<tr>
@@ -55,7 +55,7 @@
 							未完成
 							</td>
 							<td>
-								<%= link_to @undone_count,'/' %>
+								<%= link_to @undone_count, presents_path(:resolve => 'true')  %>
 							</td>
 						</tr>
 					</table>

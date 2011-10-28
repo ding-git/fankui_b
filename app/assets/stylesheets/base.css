@@ -258,7 +258,7 @@ ul#mainnav span.notch {
     width: 100%;
 }
 ul#mainnav span.notch span.inner {
-    background: url("http://fav.tv/images/hdr_notch.png") no-repeat scroll center center transparent;
+    background: url("/images/hdr_notch.png") no-repeat scroll center center transparent;
     display: block;
     height: 7px;
     margin: 0 auto;
@@ -2611,3 +2611,10 @@ p b{
 #container div div{padding: 15px;}
 #sidebar { float:left; width:100px; text-align:   right; color: blue; font-size:14px;}
 #content { }
+
+#user_icon{
+	border-style: solid;
+	border-color: #FFCC99;
+	border-bottom-width: 1px;
+	border-right-width: 1px;
+}

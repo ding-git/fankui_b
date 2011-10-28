@@ -10,11 +10,27 @@
 				<ul>
 					<% if user_signed_in? -%> <!-- Provided by devise -->
 					<li>
-					  <%= link_to '用户信息', edit_user_registration_path %>
+
 					</li>
-					<li>
-					  <%= link_to '退出登录', destroy_user_session_path, :method => :delete %>
+				</ul>
+			</li>
+					<li id="usermenu" class="user">
+											  
+											<a class="avatar" href="<%= edit_user_registration_path %>">
+											<%= image_tag('http://p4.zhimg.com/66/6b/666b0abfc_l.jpg',:size =>"27x27",:id => 'user_icon') %>
+											<span class="mask">&nbsp;</span>
+											</a>
+						<a class="name" onclick="$('#usermenu').toggleClass('open'); return false;" href="<%= edit_user_registration_path %>"><%= current_user.email %></a>
+						<span class="indicator" onclick="$('#usermenu').toggleClass('open'); return false;">&nbsp;</span>
+						<ul class="menu">
+						<li class="top">&nbsp;</li>
+						<li class="logged_in_as"><%= current_user.email %>,欢迎回来</li>
+						<li class="divider">&nbsp;</li>
+						<li class="logged_in_as"><%= link_to '退出登录', destroy_user_session_path, :method => :delete %></li>
+						<li class="btm">&nbsp;</li>
+						</ul>
 					</li>
+										
 					<% else %>
 					<div style="float:right">
 					<li>
@@ -24,9 +40,9 @@
 					  <%= link_to '登录', new_user_session_path %>
 					</li>
 					</div>
-					<% end -%>
 				</ul>
 			</li>
+					<% end -%>
 			<li class="search">
 				<form method="get" action="/search/index">
 				<label class="icon" for="gsrch">&nbsp;</label>

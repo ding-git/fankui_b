@@ -378,7 +378,7 @@ ul#tools a.avatar {
     width: 25px;
 }
 ul#tools a.avatar span.mask {
-    background: url("http://fav.tv/images/usersprite.png") no-repeat scroll -223px -16px transparent;
+    background: url("/images/usersprite.png") no-repeat scroll -223px -16px transparent;
     display: block;
     height: 27px;
     left: 0;
@@ -398,7 +398,7 @@ ul#tools a.name {
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
 }
 ul#tools span.indicator {
-    background: url("http://fav.tv/images/usersprite.png") no-repeat scroll -206px -16px transparent;
+    background: url("/images/usersprite.png") no-repeat scroll -206px -16px transparent;
     display: block;
     float: left;
     height: 24px;
@@ -414,7 +414,7 @@ ul#tools span.indicator:after {
     visibility: hidden;
 }
 ul#tools ul.menu {
-    background: url("http://fav.tv/images/usersprite.png") repeat-y scroll left top transparent;
+    background: url("/images/usersprite.png") repeat-y scroll left top transparent;
     cursor: default;
     display: none;
     margin: 0;
@@ -456,7 +456,7 @@ ul#tools ul.menu li.logged_in_as {
 }
 ul#tools ul.menu li.top, ul#tools ul.menu li.btm {
     -moz-user-select: none;
-    background: url("http://fav.tv/images/usersprite.png") no-repeat scroll -189px 0 transparent;
+    background: url("/images/usersprite.png") no-repeat scroll -189px 0 transparent;
     height: 8px;
     left: 0;
     position: absolute;

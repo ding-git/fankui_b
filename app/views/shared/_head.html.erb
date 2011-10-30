@@ -16,11 +16,11 @@
 			</li>
 					<li id="usermenu" class="user">
 											  
-											<a class="avatar" href="<%= edit_user_registration_path %>">
-											<%= image_tag('http://p4.zhimg.com/66/6b/666b0abfc_l.jpg',:size =>"27x27",:id => 'user_icon') %>
+											<a class="avatar" href="<%= user_path(current_user) %>">
+											<%= image_tag('/images/none_logo.jpg',:size =>"27x27",:id => 'user_icon') %>
 											<span class="mask">&nbsp;</span>
 											</a>
-						<a class="name" onclick="$('#usermenu').toggleClass('open'); return false;" href="<%= edit_user_registration_path %>"><%= current_user.email %></a>
+						<a class="name" onclick="$('#usermenu').toggleClass('open'); return false;" href="<%= users_path(current_user) %>"><%= current_user.email %></a>
 						<span class="indicator" onclick="$('#usermenu').toggleClass('open'); return false;">&nbsp;</span>
 						<ul class="menu">
 						<li class="top">&nbsp;</li>

@@ -67,7 +67,7 @@ $(function () {
 				<td><%= present.type %></td>		
 				<td><%= present.created_at.to_date %></td>
 				<td><%= present.cause_s %></td>
-			    <td><%= link_to '编辑', edit_present_path(present) %></td>
+			    <td><%= link_to '编辑', edit_present_path(present) if user_signed_in? %></td>
 			    <td><%= link_to '下载附件', present.fileatt.to_s if present.fileatt.to_s %></td>
 			</tr>
 				<% end %>

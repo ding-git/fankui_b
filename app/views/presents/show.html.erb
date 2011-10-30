@@ -73,9 +73,10 @@
 					<% if @present.review != [] %>
 
 					<% @present.review.each do |review| %>
-					<%= review.content %></br>
-					</br>
-					由 <%= review.user.email %> 发布. <%= review.created_at.to_date %>
+					<p>
+						<%= review.content %></br>
+						由 <%= review.user.email %> 发布. <%= review.created_at.to_date %>
+					</p>
 					<% end %>
 
 					<% else %>
@@ -86,16 +87,18 @@
 				</div>
 				
 				<div>
-					<%= link_to '新增',new_review_path(:present => params[:id]),:remote => true %>
+					<%= link_to '增加一条留言',new_review_path(:present => params[:id]),:remote => true if user_signed_in? %>
 					<div id='edit_window'></div>
 				</div>
 	</div>
+	<% if user_signed_in? %>
 	<div>
 		<div>
 			<%= link_to '编辑', edit_present_path(@present) %> |
 			<%= link_to '返回主页', presents_path %>
 		</div>
 	</div>
+	<% end %>
 </div>
 
 

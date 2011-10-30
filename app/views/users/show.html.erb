@@ -1,0 +1,7 @@
+<%= link_to '查看所有用户',users_path %>
+
+<p>User: <%= @user.name %></p>
+
+<% if current_user.id.to_s == params[:id]   %>
+<%= link_to '编辑个人资料', edit_user_registration_path %>
+<% end %>

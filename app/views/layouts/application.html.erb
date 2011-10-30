@@ -15,7 +15,19 @@
 <%= render 'shared/head' %>
  
 <div class="content">
+
+	<%= user_signed_in? %>
 	<div class="inner">
+		<div>
+			<p class="notice"><%= notice %></p>
+			<p class="alert"><%= alert %></p>
+		</div>
+		<% unless user_signed_in? %>
+			<div>
+				<p>亲爱的用户,您尚未登陆,可能无法使用所有功能</p>
+				<p>我知道了 | 立即登陆 | 还没有账号？</p>
+			</div>
+		<% end %>
 		<%= yield %>
 	</div>
 	<%= render 'shared/footer' %>

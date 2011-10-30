@@ -1,0 +1,6 @@
+<h1>所有用户</h1>
+<% @users.each do |user| %>
+  <p><%=link_to user.name, user %>
+	<%= user.email %>
+	</p>
+<% end %>

@@ -1,5 +1,8 @@
 FankuiB::Application.routes.draw do
+
   get "search/index"
+  
+   match 'mail' => 'home#mail'
 
   resources :reviews
 
@@ -10,6 +13,8 @@ FankuiB::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   devise_for :users
+  
+  resources :users, :only => [:show,:index]
 
   root :to => "home#index"
 

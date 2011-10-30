@@ -1,4 +1,7 @@
 class HomeController < ApplicationController
+  
+  
+  
   def index
     @presents = Present.order('created_at DESC').limit(10)
     @completed_count = Present.find(:all, :conditions => "resolve = true").count
@@ -7,6 +10,10 @@ class HomeController < ApplicationController
 
   def show
     redirect_to '/'
+  end
+  
+  def mail
+    UserMailer.welcome_email.deliver
   end
 
 end

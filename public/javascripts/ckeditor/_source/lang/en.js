@@ -184,7 +184,7 @@ CKEDITOR.lang['en'] =
 		advisoryTitle		: 'Advisory Title',
 		advisoryContentType	: 'Advisory Content Type',
 		cssClasses		: 'Stylesheet Classes',
-		charset			: 'Linked Resource Charset',
+		charset			: 'xxxLinked Resource Charset',
 		styles			: 'Style',
 		rel			: 'Relationship',
 		selectAnchor		: 'Select an Anchor',

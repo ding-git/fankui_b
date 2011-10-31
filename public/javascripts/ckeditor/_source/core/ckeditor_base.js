@@ -223,5 +223,3 @@ if ( !window.CKEDITOR )
  *     config.uiColor = '#AADC6E';
  * };
  */
-
-// PACKAGER_RENAME( CKEDITOR )

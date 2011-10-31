@@ -6,8 +6,8 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 CKEDITOR.editorConfig = function( config )
 {
 	// Define changes to default configuration here. For example:
-	// config.language = 'fr';
-	// config.uiColor = '#AADC6E';
+	//config.language = 'zh-cn';
+	//config.uiColor = '#AADC6E';
 	
   /* Filebrowser routes */
   // The location of an external file browser, that should be launched when "Browse Server" button is pressed.
@@ -47,6 +47,7 @@ CKEDITOR.editorConfig = function( config )
   /* Extra plugins */
   // works only with en, ru, uk locales
   config.extraPlugins = "embed,attachment";
+
   
   /* Toolbars */
   config.toolbar = 'Easy';
@@ -62,4 +63,9 @@ CKEDITOR.editorConfig = function( config )
         ['Link','Unlink','Anchor'], ['Image', 'Attachment', 'Flash', 'Embed'],
         ['Table','HorizontalRule','Smiley','SpecialChar','PageBreak']
     ];
+
+	config.toolbar_Basic =
+	[
+	    ['Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-', 'Link']
+	];
 };

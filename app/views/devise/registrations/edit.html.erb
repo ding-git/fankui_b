@@ -19,6 +19,9 @@
   <div><%= f.label '确认密码' %><br />
   <%= f.password_field :password_confirmation %></div>
 
+  <p>
+    <%= f.file_field :people %>
+  </p>
 
   <div><%= f.submit "更新" %></div>
 <% end %>

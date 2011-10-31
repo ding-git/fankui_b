@@ -14,8 +14,8 @@ FankuiB::Application.routes.draw do
 
   devise_for :users
   
-  resources :users, :only => [:show,:index]
-
+  resources :users
+  
   root :to => "home#index"
 
   resources :home, :path => "t" do

@@ -9,7 +9,13 @@ class Present < ActiveRecord::Base
     def level_s
       case self.level
             when 1
+              return 'VIP'
+            when 2
               return '高'
+            when 3
+              return '中'
+            when 4
+              return '低'
             else
               return nil
             end

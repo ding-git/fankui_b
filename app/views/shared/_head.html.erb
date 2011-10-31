@@ -17,7 +17,11 @@
 					<li id="usermenu" class="user">
 											  
 											<a class="avatar" href="<%= user_path(current_user) %>">
-											<%= image_tag('/images/none_logo.jpg',:size =>"27x27",:id => 'user_icon') %>
+												<% if current_user.people %>
+													<%= image_tag(current_user.people,:size =>"27x27",:id => 'user_icon') %>
+												<% else %>
+													<%= image_tag('/images/none_logo.jpg',:size =>"27x27",:id => 'user_icon') %>
+												<% end %>
 											<span class="mask">&nbsp;</span>
 											</a>
 						<a class="name" onclick="$('#usermenu').toggleClass('open'); return false;" href="<%= users_path(current_user) %>"><%= current_user.email %></a>

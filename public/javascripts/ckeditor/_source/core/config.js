@@ -115,7 +115,7 @@ CKEDITOR.config =
 	 * @example
 	 * config.contentsLanguage = 'fr';
 	 */
-	contentsLanguage : '',
+	contentsLanguage : 'zh-cn',
 
 	/**
 	 * The user interface language localization to use. If left empty, the editor
@@ -128,7 +128,7 @@ CKEDITOR.config =
 	 * // Load the German interface.
 	 * config.language = 'de';
 	 */
-	language : '',
+	language : 'zh-cn',
 
 	/**
 	 * The language to be used if the <code>{@link CKEDITOR.config.language}</code>
@@ -138,7 +138,7 @@ CKEDITOR.config =
 	 * @example
 	 * config.defaultLanguage = 'it';
 	 */
-	defaultLanguage : 'en',
+	defaultLanguage : 'zh-cn',
 
 	/**
 	 * Sets the behavior of the <em>Enter</em> key. It also determines other behavior

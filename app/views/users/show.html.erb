@@ -1,7 +1,22 @@
 <%= link_to '查看所有用户',users_path %>
 
-<p>User: <%= @user.name %></p>
+<p><h1><%= @user.name %></h1></p>
+<%= image_tag @user.people %>
+
+
+
+<%= form_for @user, :html => {:multipart => true} do |f| %>
+  <p>
+	<%= f.hidden_field :name %>
+	<%= f.hidden_field :email %>
+    <%= f.file_field :people %>
+  </p>
+  <p><%= f.submit :更改头像 %></p>
+<% end %>
 
 <% if current_user.id.to_s == params[:id]   %>
-<%= link_to '编辑个人资料', edit_user_registration_path %>
+<p>
+	<%= link_to '编辑个人资料', edit_user_registration_path %>
+</p>
+
 <% end %>

@@ -1,104 +1,95 @@
 <%= render 'present_bar' %>
 
+<!-- UserReaded? <%= @present.user_readed(current_user.id) if user_signed_in?  %> -->
 
 <div id="container">
 	<p id="notice"><%= notice %></p>
-	<div>
-		<div id="sidebar">ID:</div>
-	  	<div id="content"><%= @present.id %></div>
-	</div>
-	<div>
-		<p>
-		  <h1>
-			<b>标题:</b>
-			<%= @present.title %>
-		  </h1>
-		<h2>
-			(已解决)
-		</h2>
-		</p>
-	</div>
-	<div>
-		<div id="sidebar">产品类型:</div>
-	  	<div id="content">Internet Explorer产品</div>
-	</div>
-	<div>
-		<div id="sidebar">优先级:</div>
-	  	<div id="content"><%= @present.level_s %></div>
-	</div>
-	<div>
-		<div id="sidebar">描述:</div>
-	  	<div id="content"><%=raw @present.description %></div>
-	</div>
-	<div>
-		<div id="sidebar">问题原因:</div>
-	  	<div id="content"><%= @present.cause_s %></div>
-	</div>
-	<div>
-		<div id="sidebar">原因描述:</div>
-	  	<div id="content"><%=raw @present.cause_detail %></div>
-	</div>
-	<div>
-		<div id="sidebar">解决方案:</div>
-	  	<div id="content"><%=raw @present.solution %></div>
-	</div>
-	<div>
-		<div id="sidebar">文档附件:</div>
-	  	<div id="content"><%= link_to @present.fileatt.to_s.split('/').last, @present.fileatt.to_s if @present.fileatt.to_s %>
-		(<%= number_to_human_size(@present.fileatt.size, :precision => 2)  %>)
+	
+	<div style='display:none'>
+		<div id='inline_content' style='padding:10px; background:#fff;'>
+			分享到。。
 		</div>
 	</div>
-	<div>
-		<div id="sidebar">备注:</div>
-	  	<div id="content">暂无备注</div>
-	</div>
-	<div>
-			<div id="sidebar">截止时间：</div>
-		  	<div id="content">-</div>
-	</div>
-	<div>
-			<div id="sidebar">项目：</div>
-		  	<div id="content">未指定</div>
-	</div>
-	<div>
-		<div id="sidebar">用户:</div>
-	  	<div id="content"><%= User.first.email %></div>
-	</div>
-	<div>
-		<div>留言：</div>
-	</div>
-	<div>
-			  	<div class='pinglun'>
+	
+	
+	
+	
+	<div id="jive-body-maincol-container">
+		<div>
+		<h2>
+		<%= @present.title %>
+		</h2>
+		</div>
+		<div>
+		<strong> 10&nbsp;Views </strong>
+		<strong>0 Replies</strong>
+		<a class="localScroll" href="/message/16590556?tstart=0#16590556">Latest reply</a>
+		: 2011-10-31 下午5:56 by matteochirco926
+		</div>
+		
+		<div class="jive-thread-info font-color-meta">
+			适用于：Internet Explorer产品
+		</div>
+		
+		
+		<div class="jive-thread-info font-color-meta">
+			项目： 暂无分类 | 
+			优先级：<%= @present.level_s %> |
+			项目截止日期： <%= Time.now.to_date + 2.day %>
+		</div>
+		
+		<div class="jive-thread-info font-color-meta">
+			<h3>问题描述</h3>
+			<%=raw @present.description %>
+		</div>
+		
+		<div class="jive-thread-info font-color-meta">
+			<h3>发生原因</h3>
+			<%=raw @present.cause_detail %>
+		</div>
+		
+		<div class="jive-thread-info font-color-meta">
+			<h3>解决方案</h3>
+			<%=raw @present.solution %>
+		</div>
 
-					<% if @present.review != [] %>
+			<div class="jive-thread-info font-color-meta">
+				<h3>文档附件</h3>
+				<% if !@present.fileatt.blank? %>
+					<%= link_to @present.fileatt.to_s.split('/').last, @present.fileatt.to_s %>
+					(<%= number_to_human_size(@present.fileatt.size, :precision => 2)   %>)
+				<% else %>
+				无附件
+				<% end %>
+			</div>
+			
 
-					<% @present.review.each do |review| %>
-					<p>
-						<%= review.content %></br>
-						由 <%= review.user.email %> 发布. <%= review.created_at.to_date %>
-					</p>
-					<% end %>
+		  	<div class='pinglun'>
 
-					<% else %>
+				<% if @present.review != [] %>
 
-					暂时还没有评论
+				<% @present.review.each do |review| %>
+				<p>
+					<%= link_to (image_tag review.user.people , :size => '50x50'), user_path(review.user)%>
+					<%= review.content %></br>
+					由 <%= review.user.email %> 发布. <%= review.created_at.to_date %>
+				</p>
+				<% end %>
 
-					<% end %>
-				</div>
-				
-				<div>
-					<%= link_to '增加一条留言',new_review_path(:present => params[:id]),:remote => true if user_signed_in? %>
+				<% else %>
+
+				暂时还没有评论
+
+				<% end %>
+				<div>   
+					<%= link_to '增加一条留言',new_review_path(:present => params[:id]),:remote => true,:class => "btn primary" if user_signed_in? %>
 					<div id='edit_window'></div>
 				</div>
+			</div>
 	</div>
-	<% if user_signed_in? %>
-	<div>
-		<div>
-			<%= link_to '编辑', edit_present_path(@present) %> |
-			<%= link_to '返回主页', presents_path %>
-		</div>
-	</div>
-	<% end %>
+	
+	<%= render 'nav_tool' %>
+
 </div>
 
 

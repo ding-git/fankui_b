@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111031051141) do
+ActiveRecord::Schema.define(:version => 20111031100512) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -69,12 +69,14 @@ ActiveRecord::Schema.define(:version => 20111031051141) do
     t.text     "solution"
     t.text     "note"
     t.integer  "question_type"
-    t.boolean  "resolve",       :default => false
+    t.boolean  "resolve",            :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "fileatt"
     t.string   "title"
     t.string   "cause_detail"
+    t.integer  "replies_count",                         :null => false
+    t.integer  "last_reply_user_id", :default => 0,     :null => false
   end
 
   create_table "reviews", :force => true do |t|

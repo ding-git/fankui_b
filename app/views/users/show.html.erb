@@ -1,7 +1,9 @@
 <%= link_to '查看所有用户',users_path %>
 
+<%= Rails.env %>
+
 <p><h1><%= @user.name %></h1></p>
-<%= image_tag @user.people %>
+<%= image_tag @user.people if !@user.people.blank? %>
 
 
 

@@ -21,4 +21,14 @@ class PresentsController < InheritedResources::Base
     end
   end
   
+  def new
+    @present = Present.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.js 
+    end
+  end
+    
+  
 end

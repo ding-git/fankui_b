@@ -1,7 +1,8 @@
 FankuiB::Application.routes.draw do
 
   get "search/index"
-  
+     match 'ajax' => 'ajax#index'
+     
    match 'mail' => 'home#mail'
 
   resources :reviews

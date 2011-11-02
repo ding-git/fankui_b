@@ -42,4 +42,44 @@ class Present < ActiveRecord::Base
             end
     end
     
+    # 检查用户是否看过
+    # result:
+    #   0 读过
+    #   1 未读
+    #   2 最后是用户的回复
+    def user_readed?(user_id)
+      uids = Rails.cache.read("Present:user_read:#{self.id}")
+      if uids.blank?
+        if self.last_reply_user_id == user_id || self.user_id == user_id
+          return 2
+        else 
+          return 1
+        end
+      end
+
+      if uids.index(user_id)
+        return 0
+      else
+        if self.last_reply_user_id == user_id || self.user_id == user_id
+          return 2
+        else 
+          return 1
+        end
+      end
+    end    
+    
+    
+    # 记录用户读过
+    def user_readed(user_id)
+      uids = Rails.cache.read("Present:user_read:#{self.id}")
+      if uids.blank?
+        uids = [user_id]
+      else
+        uids = uids.dup
+      end
+
+  		uids << user_id
+      Rails.cache.write("Present:user_read:#{self.id}",uids)
+    end
+
 end

@@ -1,0 +1,61 @@
+<div>
+	<p>
+	  <h1>
+		<b>标题:</b>
+		<%= @present.title %>
+	  </h1>
+	<h2>
+		(已解决)
+	</h2>
+	</p>
+</div>
+<div>
+	<div id="sidebar">产品类型:</div>
+  	<div id="content">Internet Explorer产品</div>
+</div>
+	<div>
+			<div id="sidebar">项目：</div>
+		  	<div id="content">未指定</div>
+	</div>
+<div>
+	<div id="sidebar">优先级:</div>
+  	<div id="content"><%= @present.level_s %></div>
+</div>
+<div>
+	<div id="sidebar">描述:</div>
+  	<div id="content"><%=raw @present.description %></div>
+</div>
+<div>
+	<div id="sidebar">问题原因:</div>
+  	<div id="content"><%= @present.cause_s %></div>
+</div>
+<div>
+	<div id="sidebar">原因描述:</div>
+  	<div id="content"><%=raw @present.cause_detail %></div>
+</div>
+<div>
+	<div id="sidebar">解决方案:</div>
+  	<div id="content"><%=raw @present.solution %></div>
+</div>
+<div>
+	<div id="sidebar">文档附件:</div>
+  	<div id="content"><%= link_to @present.fileatt.to_s.split('/').last, @present.fileatt.to_s if @present.fileatt.to_s %>
+	(<%= number_to_human_size(@present.fileatt.size, :precision => 2)  %>)
+	</div>
+</div>
+<div>
+	<div id="sidebar">备注:</div>
+  	<div id="content">暂无备注</div>
+</div>
+<div>
+		<div id="sidebar">截止时间：</div>
+	  	<div id="content">-</div>
+</div>
+<div>
+	<div id="sidebar">用户:</div>
+  	<div id="content"><%= User.first.email %></div>
+</div>
+<div>
+	<div>留言：</div>
+</div>
+<div>

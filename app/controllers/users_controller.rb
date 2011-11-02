@@ -7,6 +7,8 @@ class UsersController < ApplicationController
     @users = User.all
   end
   
+  
+  
   def update
     @user = User.find(params[:id])
     

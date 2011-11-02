@@ -17,7 +17,7 @@
 					<li id="usermenu" class="user">
 											  
 											<a class="avatar" href="<%= user_path(current_user) %>">
-												<% if current_user.people %>
+												<% if !current_user.people.blank? %>
 													<%= image_tag(current_user.people,:size =>"27x27",:id => 'user_icon') %>
 												<% else %>
 													<%= image_tag('/images/none_logo.jpg',:size =>"27x27",:id => 'user_icon') %>

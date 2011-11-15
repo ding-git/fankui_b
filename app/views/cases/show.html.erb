@@ -1,0 +1,76 @@
+<%= render 'presents/present_bar' %>
+
+<%= render 'presents/nav_tool' %>
+
+
+<div id="container">
+	
+	<div id="jive-body-maincol-container">
+		<div>
+			<h1><%= @case.title %></h1>
+		</div>
+		
+		<div class="jive-thread-info font-color-meta">
+			优先级: <%= @case.level_string %> | 
+			过期:	<%= @case.expired? %> |
+		   阅读次数:
+		</div>
+		
+		<div class="jive-thread-info font-color-meta">
+			适用于:  <%= @case.product %> |
+			项目: <%= @case.project %> | 
+			截止时间:  <%= @case.deadline %> |
+			发布人:  <%= @case.user.email %>
+		</div>
+		
+		<div class="jive-thread-info font-color-meta">
+			<h3>问题描述</h3>
+			<%= @case.description %>
+		</div>
+		
+		<% @case.solution.each do |solution | %>
+		<div class="jive-thread-info font-color-meta">
+			<h3>原因</h3>
+			<%= solution.reason %>
+			<h3>答案</h3>
+			<%= solution.content %></br>
+			</br>
+			由<%= solution.user.email %>发表
+		</div>
+		<% end %>
+		
+		
+		
+		<div class='pinglun'>
+
+			<% if !@case.review.blank? %>
+
+			<% @case.review.each do |review| %>
+			<p>
+				<%= link_to (image_tag review.user.avatar , :size => '50x50'), user_path(review.user)%>
+				<%= review.content %></br>
+				由 <%= review.user.email %> 发布. <%= review.created_at.to_date %>
+			</p>
+			<% end %>
+
+			<% else %>
+
+			暂时还没有评论
+
+			<% end %>
+			<div>   
+				<%= link_to '增加一条留言',new_review_path(:present => params[:id]),:remote => true,:class => "btn primary" if user_signed_in? %>
+				<div id='edit_window'></div>
+			</div>
+		</div>
+
+		
+		
+		<%= link_to 'Edit', edit_case_path(@case) %> |
+		<%= link_to 'Back', cases_path %>
+	</div>
+	
+
+</div>
+
+

@@ -2,14 +2,26 @@
 <html>
 <head>
   <title><%= Settings.app_name %></title>
-  <%= stylesheet_link_tag    "/assets/base.css" %>
 <%= javascript_include_tag "/assets/jquery.js" %>
 <%= javascript_include_tag "/assets/jquery_ujs.js" %>
+
 <%= javascript_include_tag "/javascripts/ckeditor/ckeditor.js" %>
-<%= javascript_include_tag "/assets/highcharts.js" %>
-<%= javascript_include_tag "/assets/jquery.colorbox-min.js" %>
+<%= javascript_include_tag "/javascripts/highcharts.js" %>
+<%= javascript_include_tag "/javascripts/jquery.colorbox-min.js" %>
+<%= javascript_include_tag "/javascripts/site.js" %>
+<%= javascript_include_tag "/javascripts/jquery.cycle.js" %>
+
+<%= stylesheet_link_tag    "/stylesheets/base.css" %>
+<%= stylesheet_link_tag    "/stylesheets/index_style.css" %>
+
   <%= csrf_meta_tags %>
 	<%= yield :colorbox %>
+	<script>
+		$(document).ready(function(){
+			//Examples of how to assign the ColorBox event to elements
+			$(".ajax").colorbox({ width:"50%"});
+		});
+	</script>
 </head>
 <body>
 
@@ -17,19 +29,20 @@
  
 <div class="content">
 
-	<%= user_signed_in? %>
+	<% user_signed_in? %>
 	<div class="inner">
-		<div>
-			<p class="notice"><%= notice %></p>
-			<p class="alert"><%= alert %></p>
-		</div>
-		<% unless user_signed_in? %>
-			<div>
+		
+		<%= render 'shared/errors_messages' %>
+		
+		<% unless user_signed_in? || cookies[:notice] == 'flase' %>
+			<div class="none_signed_notice">
 				<p>亲爱的用户,您尚未登陆,可能无法使用所有功能</p>
-				<p>我知道了 | 立即登陆 | 还没有账号？</p>
+				<%= link_to (image_tag '/images/del.gif'), notice_false_path, :remote => true %>
+				<%= link_to '不再提示', notice_false_path, :remote => true %>
 			</div>
 		<% end %>
 		<%= yield %>
+		
 	</div>
 	<%= render 'shared/footer' %>
 <div>

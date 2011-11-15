@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  level: 1
+  deadline: 2011-11-14
+  product: MyString
+  user_id: 1
+  project: MyString
+
+two:
+  title: MyString
+  description: MyText
+  level: 1
+  deadline: 2011-11-14
+  product: MyString
+  user_id: 1
+  project: MyString

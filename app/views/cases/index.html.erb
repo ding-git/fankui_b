@@ -1,0 +1,90 @@
+<%= render 'presents/present_bar' %>
+
+<div id="container">
+
+<div id="jive-body-maincol-container">
+	
+<p>
+	<%= link_to '全部', presents_path %> |
+	<%= link_to '已完成', presents_path(:resolve => 'true') %> |
+	<%= link_to '未完成', presents_path(:resolve => 'false') %>
+</p>
+
+<div id="orders_chart2" style="width: 600px; height: 300px;"></div>
+
+<table class="pretty">
+  <!-- Orders table code here -->
+</table>
+
+
+<script type="text/javascript" charset="utf-8">
+$(function () {
+
+	new Highcharts.Chart({
+    chart: { renderTo: 'orders_chart2' },
+    title: { text: '问题解决数量' },
+    xAxis: { categories: [
+	
+		<% @time.each do |timeday| %>
+			'<%= timeday %>',
+		<% end %>
+						  ] },
+    yAxis: {
+      title: { text: '笔数'}
+    },
+    series: [{
+      data: [
+				<% @case.each do |caseday| %>
+					<%= caseday %>,
+				<% end %>
+			]
+    }]
+  });
+});
+</script>
+
+
+
+<div class="actions_wrapper">
+
+	<ul class="content_actions">
+		项目历史</br>
+	</ul>
+	<ul class="content_bctions">
+		<table>
+		  <tr>
+		    <th>Title</th>
+		    <th>Level</th>
+		    <th>Product</th>
+		    <th>Project</th>
+		    <th>Deadline</th>
+		    <th>User</th>
+		  </tr>
+
+		<% @presents.each do | view | %>
+		  <tr>
+		    <td><%= link_to view.title,view %></td>
+		    <td><%= view.level_string %></td>
+		    <td><%= view.product %></td>
+		    <td><%= view.project %></td>
+		    <td><%= view.deadline %></td>
+		    <td><%= view.user.email %></td>
+		    <td><%= (view.created_at. + 8.hour).to_s(:db) %></td>
+		  </tr>
+		<% end %>
+		</table>
+	</ul>
+</div>
+</br>
+
+
+<%= link_to '提交一个新问题', new_case_path %>
+
+</div>
+
+
+<%= render 'presents/nav_tool' %>
+
+</div>
+
+

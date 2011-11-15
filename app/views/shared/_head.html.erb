@@ -1,6 +1,6 @@
 <div class="head">
 	<div class="inner">
-		<a class="logo" href="/">fav.tv</a>
+		<a class="logo" href="/">产品反馈系统</a>
 		<ul id="mainnav">
 			<%= yield :bar %>
 		</ul>
@@ -28,7 +28,11 @@
 						<span class="indicator" onclick="$('#usermenu').toggleClass('open'); return false;">&nbsp;</span>
 						<ul class="menu">
 						<li class="top">&nbsp;</li>
-						<li class="logged_in_as"><%= current_user.email %>,欢迎回来</li>
+						<li class="logged_in_as">Hi,欢迎回来</li>
+						<li class="divider">&nbsp;</li>
+						<li class="logged_in_as"><%= link_to '我的收藏', favorites_user_path(current_user) %></li>
+						<li class="logged_in_as"><%= link_to '我的好友', followers_user_path(current_user) %></li>
+						<li class="logged_in_as"><%= link_to '我的私信', messages_user_path(current_user) %></li>						
 						<li class="divider">&nbsp;</li>
 						<li class="logged_in_as"><%= link_to '退出登录', destroy_user_session_path, :method => :delete %></li>
 						<li class="btm">&nbsp;</li>
@@ -41,7 +45,7 @@
 					  <%= link_to '注册', new_user_registration_path %>
 					</li>
 					<li>
-					  <%= link_to '登录', new_user_session_path %>
+					<%= link_to '登陆',sign_path,:class => "ajax",:remote => true %>
 					</li>
 					</div>
 				</ul>

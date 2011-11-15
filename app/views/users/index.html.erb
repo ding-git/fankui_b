@@ -1,6 +1,48 @@
 <h1>所有用户</h1>
-<% @users.each do |user| %>
-  <p><%=link_to user.name, user %>
-	<%= user.email %>
-	</p>
+	<table>
+		<tr>
+			<td></td>
+			<td><b>Username</b></td>
+			<td><b>Email</b></td>
+			<td></td>
+		</tr>
+	<% @users.all.each do |user| %>
+		<tr>
+			<td><%= link_to (image_tag user.avatar,:size => '25x25'),user %></td>
+			<td><%=link_to user.name, user %></td>
+			<td><%= user.email %></td>
+			<% if current_user.following?(user) %>
+			<td>已关注</td>
+			<% else %>
+			<td><%= link_to '关注',session_follow_path(:follow_id => user.id) %></td>
+			<% end %>
+		</tr>			
+	<% end %>
+
+	</table>
+
+
+
+<h1>最近15天注册的用户</h1>
+
+<table>
+	<tr>
+		<td></td>
+		<td><b>Username</b></td>
+		<td><b>Email</b></td>
+		<td></td>
+	</tr>
+<% @users.last_week_sign_in.each do |user| %>
+	<tr>
+		<td><%= link_to (image_tag user.avatar,:size => '25x25'),user %></td>
+		<td><%=link_to user.name, user %></td>
+		<td><%= user.email %></td>
+		<% if current_user.following?(user) %>
+		<td>已关注</td>
+		<% else %>
+		<td><%= link_to '关注',session_follow_path(:follow_id => user.id) %></td>
+		<% end %>
+	</tr>			
 <% end %>
+
+</table>

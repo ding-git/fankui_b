@@ -1,0 +1,9 @@
+<div>
+	<h2><%= @user.email %>的关注的人</h2>
+	共<%= @following.count %>人
+	<p>
+		<% @following.each do |following|%>
+		<%= link_to following.email,following %></br>
+		<% end %>
+	</p>
+</div>

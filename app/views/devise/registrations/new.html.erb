@@ -1,4 +1,7 @@
-<h2>Sign up</h2>
+<%= render 'shared/content_for_bar'%>
+
+
+<h2>用户注册</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -9,13 +12,13 @@
   <div><%= f.label :email %><br />
   <%= f.email_field :email %></div>
 
-  <div><%= f.label :password %><br />
+  <div><%= f.label '密码' %><br />
   <%= f.password_field :password %></div>
 
-  <div><%= f.label :password_confirmation %><br />
+  <div><%= f.label '确认密码' %><br />
   <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
+  <div><br /><%= f.submit "Sign up" %>
+   <%= link_to '返回', :back, :method => :get %></div>
 
-<%= render :partial => "devise/shared/links" %>
+<% end %>

@@ -1,13 +1,30 @@
 FankuiB::Application.routes.draw do
 
+  resources :solutions
+
+  resources :cases
+
   get "search/index"
-     match 'ajax' => 'ajax#index'
-     
-   match 'mail' => 'home#mail'
+
+  get "session/follow"
+  get "session/keep"
+  
+  get 'home/show'
+  
+  match 'ajax/new' => 'ajax#new'
+  match 'ajax/edit' => 'ajax#edit'
+  match 'ajax/answer' => 'ajax#answer'
+  match 'notice/false' => 'ajax#notice' 
+
+  match 'mail' => 'home#mail'
+  
+  match 'sign' => 'ajax#sign'
 
   resources :reviews
 
-  resources :presents
+  resources :presents, :except => :show
+  
+  match ':year/:month/:day/:id' => "presents#show", :as => 'present', :constraints => { :year => /\d{4}/, :month => /\d{2}/, :day => /\d{2}/ }
 
   ActiveAdmin.routes(self)
 
@@ -15,8 +32,14 @@ FankuiB::Application.routes.draw do
 
   devise_for :users
   
-  resources :users
-  
+  resources :users do
+    member do
+      get "followers"
+      get "favorites"
+      get "messages"
+    end
+  end
+    
   root :to => "home#index"
 
   resources :home, :path => "t" do

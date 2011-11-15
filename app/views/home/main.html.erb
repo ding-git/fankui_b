@@ -1,0 +1,16 @@
+
+
+<%= content_for :bar do %>
+<li class="active">
+	<a href="/">问题反馈</a>
+	<span class="notch">
+		<span class="inner">&nbsp;</span>
+	</span>
+</li>
+	<li class="active">
+		<%= link_to '问题提交', presents_path %>
+	</li>
+<li class="active">
+	<%= link_to '系统管理', '/admin' %>
+</li>
+<% end %>

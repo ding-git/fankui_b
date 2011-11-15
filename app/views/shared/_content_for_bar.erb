@@ -1,0 +1,29 @@
+<% content_for :bar do %>
+<% if user_signed_in? %>
+<li class="active">
+	<a href="/">最新事件</a>
+</li>
+	<li class="active">
+		<%= link_to '提交问题', presents_path %>
+	</li>	
+<li class="active">
+	<%= link_to '查看报告', '/admin' %>
+</li>
+<li class="active">
+	<%= link_to '帮助', '/admin' %>
+</li>
+<% else %>
+<li class="active">
+	<a href="/">首页</a>
+</li>
+	<li class="active">
+		<%= link_to 'PFS是什么?', presents_path %>
+	</li>	
+<li class="active">
+	<%= link_to '谁在使用PFS?', '/admin' %>
+</li>
+<li class="active">
+	<%= link_to '帮助', '/admin' %>
+</li>
+<% end %>
+<% end %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Case:</b>
+  <%= @solution.case_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @solution.user_id %>
+</p>
+
+<p>
+  <b>Version number:</b>
+  <%= @solution.version_number %>
+</p>
+
+<p>
+  <b>Max number:</b>
+  <%= @solution.max_number %>
+</p>
+
+<p>
+  <b>Reason:</b>
+  <%= @solution.reason %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @solution.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_solution_path(@solution) %> |
+<%= link_to 'Back', solutions_path %>

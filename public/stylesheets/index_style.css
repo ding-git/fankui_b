@@ -1,0 +1,145 @@
+
+#wrapper_slideshow {
+		height: 450px;
+	    position: absolute;
+	    z-index: 9;
+	    overflow:hidden;
+	    width: 100%;
+}
+.slideshow_wrap {
+	height: 450px;
+	    left: 50%;
+	    margin-left: -800px;
+	    overflow: hidden;
+	    position: absolute;
+	    width: 1600px;
+}
+.slideshow_wrap ul {
+	margin: 0;
+	padding: 0;
+}
+#slideshow {
+	margin: 0;
+}
+#slideshow ul {
+	float: left;
+	    margin-left: -1600px;
+	    overflow: hidden;
+	    width: 4800px;
+}
+#slideshow li {
+	float: left;
+	 height: 450px;
+	 position: relative;
+	 width: 1600px;
+}
+#slideshow li a {
+	width: 100%;
+	height: 370px;
+	display: block;
+}
+#slideshow li.slide-1 {  }
+#slideshow li.slide-2 {  }
+#slideshow li.slide-3 {  }
+#slideshow li.slide-4 {  }
+#slideshow li.slide-5 {  }
+#slideshow li img { display: block; }
+
+#slideshow-nav_wrapper {
+	height: 100px;
+	    left: 50%;
+	    margin: 0 0 0 -450px;
+	    position: absolute;
+	    top: 395px;
+	    width: 980px;
+	    z-index: 10;
+}
+#slideshow-nav {
+		//float: left;
+	   // left: 310px;
+	   // position:absolute;
+	    //text-align: center;
+	    //top: 390px;
+	    //z-index: 15;
+}	
+#slideshow-nav ul {
+	margin: 0;
+	padding: 10px;
+}
+#slideshow-nav li {
+	display: -moz-inline-stack;
+	display: inline-block;
+	margin-right: 10px;
+	background-color: #ccc;
+	opacity: 0.5;
+	zoom: 1;
+	*display:inline;
+	
+}
+#slideshow-nav a {
+display: -moz-inline-stack;
+display: inline-block;
+vertical-align: top;
+*display: inline;
+*zoom: 1;
+height: 15px;
+width: 15px;
+float: left;
+display: block;
+border: 1px solid rgba(0,0,0,.25);
+-moz-border-radius:64px;
+-webkit-border-radius:64px;
+background-color: #efefef;
+margin-right: 5px;
+  
+}
+#slideshow-nav a.activeSlide {
+	border-color: #000000;
+	 background-color: #f98738;
+	    
+}
+#slideshow-nav a:hover {
+	border-color: #444; 
+	opacity: .8;
+}
+#wrapper_content {
+	width: 980px;
+	z-index: 20;
+	height: 100px;
+}
+#wrapper_content_int {
+	margin: auto 0;
+	    min-height: 900px;
+	    padding-top: 90px;
+	    position: relative;
+	    width: 980px;
+	    z-index: 9;
+}
+.footer_logos {
+	float: left;
+	margin-right: 5px;
+}
+.video {
+	margin-left: 330px;
+	    margin-top: 90px;
+}
+
+
+#feature_image_full {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 15;
+	width: 1600px;
+	height: 450px;
+	z-index: 9;
+}
+#feature_overlay_full {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 15;
+	width: 1600px;
+	height: 450px;
+	z-index: 10;
+}

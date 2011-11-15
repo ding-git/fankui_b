@@ -1,0 +1,85 @@
+<%= form_for(@present) do |f| %>
+
+
+
+<table class="mini_wrapper">
+	<tbody>
+		<tr>
+			<td>
+				<div class="element" id='new_present'>
+					<div class="input">
+					    <%= f.label '标题' %>
+					    <%= f.text_field :title %>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="element"  id='new_present'>
+					<div class="input">
+					    <%= f.label '优先级' %>
+					    <%= f.select :level ,{'VIP' => '1', '高'=> '2','中' => '3', '一般' => '4'} %>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="element" id='new_present'>
+					<div class="input" id='mini_present'>
+					    <%= f.label '问题描述' %>
+						<%= f.text_field :description %>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="element" id='new_present'>
+					<div class="input">
+					    <%= f.label '问题类型' %>
+					    <%= f.number_field :question_type %>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="element" id='new_present'>
+					<div class="input">
+					    <%= f.label '上传附件' %>
+					    <%= f.file_field :fileatt %>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+	<%= f.hidden_field :replies_count,:value => '0' %>
+</table>
+
+
+  <div class="input">
+
+  </div>
+
+<div class="group">
+
+</div>
+
+<div class="group buttons no_header ">
+<table >
+<tbody>
+<tr>
+<td>
+<div class="element">
+<div class="input">
+	<button class="submit ui-submit-button" type="submit">提交</button> <%= link_to '切换到完整模式',new_present_path %>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<% end %>

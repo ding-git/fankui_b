@@ -1,7 +1,9 @@
 <div class="footer">
 	<ul>
 		<li class="first">
-			<a href="/about"><%= Settings.app_name %></a>
+			<%= link_to Settings.app_name, '/about' %>&nbsp;&nbsp;|&nbsp;&nbsp; 
+			<%= link_to '版本历史', '/' %>&nbsp;&nbsp;|&nbsp;&nbsp; 
+			<%= link_to 'BUG反馈', '/' %>
 		</li>
 	</ul>
 	<ul class="legal">

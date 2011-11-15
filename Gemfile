@@ -4,6 +4,8 @@ gem 'rails', '3.1.0'
 
 gem 'mysql2'
 
+gem "redis"
+
 #用户
 gem 'devise'
 
@@ -22,6 +24,10 @@ gem 'activeadmin'
 
 #静态设置
 gem 'settingslogic'
+
+#邮件异步执行
+gem 'delayed_job'
+
 
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"

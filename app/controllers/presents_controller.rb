@@ -29,6 +29,10 @@ class PresentsController < InheritedResources::Base
       format.js 
     end
   end
-    
+  
+  def show
+    @present = Present.find(params[:id]) 
+    @present.count!
+  end
   
 end

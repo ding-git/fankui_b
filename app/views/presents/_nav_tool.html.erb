@@ -1,9 +1,13 @@
 <div id="jive-body-sidebarcol-container">
+	
 	<p>
-		<%= link_to '新 问 题','#inline_content',:class => "inline btn primary" %>
+		<p><%= link_to '添加答案',ajax_answer_path(:case => params[:id]),:class => "ajax btn primary" %></p>
+		<p><%= link_to '新问题',ajax_new_path,:class => "ajax btn primary" %></p>
+		<p><%= link_to '收  藏',session_keep_path(:present_id => params[:id]),:class => "btn primary" %></p>
+		<p><%= link_to '分 享','#inline_content',:class => "inline btn primary" %>	</p>
+		<p><%= link_to '类似案例','#',:class => "btn primary" %></p>
+		<p><%= link_to '日  志','#',:class => "btn primary" %></p>
+		<p><%= link_to '编辑该问题',ajax_edit_path(:case_id => params[:id]),:class => "ajax btn primary" if !params[:id].blank? %></p>
 	</p>
-	<p><%= link_to '收  藏','#',:class => "btn primary" %></p>
-	<p><%= link_to '分 享',ajax_path,:class => "ajax btn primary",:remote => true %></p>
-	<p><%= link_to '类似案例','#',:class => "btn primary" %></p>
-	<p><%= link_to '日  志','#',:class => "btn primary" %></p>				
+
 </div>

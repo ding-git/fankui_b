@@ -1,0 +1,9 @@
+<div>
+	<h2><%= @user.email %>收藏的问题</h2>
+	共<%= @keeping.count %>条
+	<p>
+		<% @keeping.each do |keep|%>
+		<%= link_to keep.title,present_slug(keep) %></br>
+		<% end %>
+	</p>
+</div>

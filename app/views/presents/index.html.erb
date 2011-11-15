@@ -59,6 +59,7 @@ $(function () {
 				<td>标题</td>
 				<td>产品类型</td>
 				<td>时间</td>
+				<td>浏览</td>
 			</tr>
 
 				<% @presents.each do |present| %>
@@ -66,11 +67,12 @@ $(function () {
 				<td><%= present.user_readed?(current_user.id) if user_signed_in?  %></td>
 				<td><%= '已解决' if present.resolve %></td>
 				<td><%= present.level_s %></td>
-				<td><%= link_to truncate(present.title,:length => 40), present_path(present) %></td>
+				<td><%= link_to truncate(present.title,:length => 40), present_slug(present) %></td>
 				<td><%= present.type %></td>		
 				<td><%= present.created_at.to_date %></td>
 			    <td><%= link_to '编辑', edit_present_path(present) if user_signed_in? %></td>
 			    <td><%= link_to '下载附件', present.fileatt.to_s if present.fileatt.to_s %></td>
+				<td><%= present.count %></td>
 			</tr>
 				<% end %>
 		</table>

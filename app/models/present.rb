@@ -42,6 +42,25 @@ class Present < ActiveRecord::Base
             end
     end
     
+    #计数器
+    
+    def count!
+      uids = Rails.cache.read("Present:user_count:#{self.id}")
+      
+      if uids.blank?
+        uids = 1
+      else
+        uids += 1
+      end
+      
+      Rails.cache.write("Present:user_count:#{self.id}",uids)
+    end
+    
+    def count
+      uids = Rails.cache.read("Present:user_count:#{self.id}")
+      return uids      
+    end
+    
     # 检查用户是否看过
     # result:
     #   0 读过
@@ -81,5 +100,9 @@ class Present < ActiveRecord::Base
   		uids << user_id
       Rails.cache.write("Present:user_read:#{self.id}",uids)
     end
-
+    
+    # helper method to generate redis keys
+    def redis_key(str)
+      "Present:#{self.id}:#{str}"
+    end
 end

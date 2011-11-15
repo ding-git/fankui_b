@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  case_id: 1
+  user_id: 1
+  version_number: 1
+  max_number: 1
+  reason: MyText
+  content: MyText
+
+two:
+  case_id: 1
+  user_id: 1
+  version_number: 1
+  max_number: 1
+  reason: MyText
+  content: MyText

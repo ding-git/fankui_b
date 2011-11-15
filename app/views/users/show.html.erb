@@ -1,20 +1,12 @@
-<%= link_to '查看所有用户',users_path %>
+</br>
+<p><%= link_to '查看所有用户',users_path %></p>
 
-<%= Rails.env %>
+
+
+
 
 <p><h1><%= @user.name %></h1></p>
-<%= image_tag @user.people if !@user.people.blank? %>
-
-
-
-<%= form_for @user, :html => {:multipart => true} do |f| %>
-  <p>
-	<%= f.hidden_field :name %>
-	<%= f.hidden_field :email %>
-    <%= f.file_field :people %>
-  </p>
-  <p><%= f.submit :更改头像 %></p>
-<% end %>
+<%= image_tag @user.avatar %>
 
 <% if current_user.id.to_s == params[:id]   %>
 <p>
@@ -22,3 +14,36 @@
 </p>
 
 <% end %>
+
+
+
+<div>
+	<h2><%= @user.email %>的关注的人</h2>
+	共<%= @following.count %>人
+	<p>
+		<% @following.each do |following|%>
+		<%= link_to following.email,following %></br>
+		<% end %>
+	</p>
+</div>
+
+<div>
+	<h2><%= @user.email %>的好友</h2>
+	共<%= @friends.count %>人
+	<p>
+		<% @friends.each do |friend|%>
+		<%= link_to friend.email,friend %></br>
+		<% end %>
+	</p>
+</div>
+
+
+<div>
+	<h2><%= @user.email %>收藏的问题</h2>
+	共<%= @keeping.count %>条
+	<p>
+		<% @keeping.each do |keep|%>
+		<%= link_to keep.title,present_slug(keep) %></br>
+		<% end %>
+	</p>
+</div>

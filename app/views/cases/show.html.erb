@@ -8,6 +8,7 @@
 	<div id="jive-body-maincol-container">
 		<div>
 			<h1><%= @case.title %></h1>
+			<%= link_to '我也遇到了同样的问题','/same' %>
 		</div>
 		
 		<div class="jive-thread-info font-color-meta">
@@ -28,14 +29,20 @@
 			<%= @case.description %>
 		</div>
 		
-		<% @case.solution.each do |solution | %>
 		<div class="jive-thread-info font-color-meta">
+			<h3>有<%= @case.solution.count %>个答案</h3>
+		</div>		
+		
+		<% @case.solution.order('good_number DESC').each do |solution | %>
+		<div class="jive-thread-info font-color-meta">		
+			<h4><%= solution.good_number %>人认为有帮助</h4>
+			<%= link_to '投票',good_path(:solution_id =>solution) %>
 			<h3>原因</h3>
 			<%= solution.reason %>
 			<h3>答案</h3>
 			<%= solution.content %></br>
 			</br>
-			由<%= solution.user.email %>发表
+			由<%= solution.user.email %>发表 , <%= solution.created_at.to_s(:db) %>
 		</div>
 		<% end %>
 		
@@ -72,5 +79,3 @@
 	
 
 </div>
-
-

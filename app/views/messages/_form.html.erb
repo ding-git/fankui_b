@@ -1,0 +1,18 @@
+<%= form_for(@message) do |f| %>
+
+  <div class="field">
+    <%= f.hidden_field :msgfrom_id,:value => current_user.id %>
+
+  </div>
+  <div class="field">
+    <%= f.label :msg_to_id %><br />
+	 <%=f.autocomplete_field 'msg_to_id', home_autocomplete_user_email_path %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

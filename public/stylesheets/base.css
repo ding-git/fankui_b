@@ -2750,6 +2750,45 @@ em{
     margin: 2px 2px 0 0;
 }
 
+div.msg{
+	width:960px;
+	margin:0px;
+}
+
+div.msg p#date{
+	float: right;
+}
+
+div.msg_from{
+	overflow: auto;
+	margin:25px;
+}
+
+div.msg h2,div.msg form{
+	margin:25px;	
+}
+
+div.msg_to{
+	margin:40px;
+	overflow: auto;
+}
+
+div.msg span{
+	    border-radius: 5px 5px 5px 5px;
+		width: 400px;
+		background-color:#eeeeee;
+		padding:5px;
+}
+
+div.msg_to span{
+	float:left;
+}
+div.msg_from span{
+	float:right;
+}
+
+
+
 
 
 

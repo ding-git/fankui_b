@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111114083643) do
+ActiveRecord::Schema.define(:version => 20111117010839) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20111114083643) do
     t.string   "project"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "request_ip"
   end
 
   create_table "ckeditor_assets", :force => true do |t|
@@ -87,6 +88,17 @@ ActiveRecord::Schema.define(:version => 20111114083643) do
 
   add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
 
+  create_table "messages", :force => true do |t|
+    t.integer  "msgfrom_id"
+    t.integer  "msg_to_id"
+    t.text     "content"
+    t.boolean  "deleted"
+    t.integer  "related"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "request_ip"
+  end
+
   create_table "presents", :force => true do |t|
     t.integer  "user_id"
     t.integer  "level"
@@ -113,6 +125,7 @@ ActiveRecord::Schema.define(:version => 20111114083643) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "case_id"
+    t.string   "request_ip"
   end
 
   create_table "solutions", :force => true do |t|
@@ -124,6 +137,8 @@ ActiveRecord::Schema.define(:version => 20111114083643) do
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "good_number",    :default => 0
+    t.string   "request_ip"
   end
 
   create_table "users", :force => true do |t|

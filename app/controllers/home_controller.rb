@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   def index
     
     if !user_signed_in?
-
+      @user_count = User.count
     else
       @presents = Present.order('created_at DESC').limit(10)
       @completed_count = Present.find(:all, :conditions => "resolve = true").count
@@ -14,11 +14,9 @@ class HomeController < ApplicationController
     end
   end
 
+  autocomplete :user, :email, :full => true
   def show
-    
-    respond_to do |format|
-      format.xml { render :xml => Case.all } # index.atom.builder
-    end
+    @user = User.new
   end
   
   def mail

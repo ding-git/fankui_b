@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_filter :authenticate_user!
+  
   def show
     @user = User.find(params[:id])
     @following = User.find(params[:id]).following
@@ -18,6 +20,12 @@ class UsersController < ApplicationController
   def favorites
     @user = User.find(params[:id])
     @keeping = User.find(params[:id]).keeping    
+  end
+  
+  def messages
+    @messages = Message.where('msgfrom_id = ? OR msg_to_id = ?',params[:id],params[:id]).order('created_at DESC').paginate(:page => params[:page], :per_page => 10)
+    
+    @message = Message.new
   end
   
   def update

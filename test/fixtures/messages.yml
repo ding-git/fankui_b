@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  msgfrom_id: 1
+  msg_to_id: 1
+  content: MyText
+  delete: false
+  related: 1
+
+two:
+  msgfrom_id: 1
+  msg_to_id: 1
+  content: MyText
+  delete: false
+  related: 1

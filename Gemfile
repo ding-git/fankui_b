@@ -6,6 +6,9 @@ gem 'mysql2'
 
 gem "redis"
 
+#自动完成
+gem 'rails3-jquery-autocomplete'
+
 #用户
 gem 'devise'
 

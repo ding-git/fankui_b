@@ -14,13 +14,13 @@
 </li>
 <% else %>
 <li class="active">
-	<a href="/">首页</a>
+		<%= link_to '家庭 | 个人', presents_path %>
 </li>
 	<li class="active">
-		<%= link_to 'PFS是什么?', presents_path %>
+		<%= link_to '商务 | 工作', presents_path %>
 	</li>	
 <li class="active">
-	<%= link_to '谁在使用PFS?', '/admin' %>
+	<%= link_to '自助修复(beta)', '/admin' %>
 </li>
 <li class="active">
 	<%= link_to '帮助', '/admin' %>

@@ -19,5 +19,12 @@ class CasesController < InheritedResources::Base
     @presents = Present.find(:all, :conditions => "resolve = #{params[:resolve]}")
     end
   end
+
+  def good
+    solution = Solution.find(params[:solution_id])
+    if solution.update_attributes!(:good_number => solution.good_number + 1)
+      redirect_to :back, notice: 'Thanks you job.'
+    end
+  end
   
 end

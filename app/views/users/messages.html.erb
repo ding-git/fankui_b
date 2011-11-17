@@ -1,3 +1,29 @@
-<div>
+<div class="msg">
 	<h2>我的私信</h2>
+	<% @messages.each do |message| %>
+
+
+		<% if message.msgfrom_id == current_user.id %>
+		<div class="msg_from">
+		<span>		
+		<%= link_to (image_tag message.formuser(message.msgfrom_id).avatar,:size => '25x25'),message.formuser(message.msgfrom_id) %>
+		<p id="date"><%= chinese_date(message) %></p>
+		我对<%= message.formuser(message.msg_to_id).email %>说：
+		<% else %>
+		<div class="msg_to">
+		<span>
+		<%= link_to (image_tag message.formuser(message.msgfrom_id).avatar,:size => '25x25'),message.formuser(message.msgfrom_id) %>
+		<p id="date"><%= chinese_date(message) %></p>
+		<%= message.formuser(message.msg_to_id).email %>对我说：
+		<% end %>
+
+
+		<p><%= message.content %></p>
+		</span>
+		</div>
+
+	<% end %>
+	
+	<%= will_paginate @messages %>
+	<%= render 'messages/form' %>
 </div>

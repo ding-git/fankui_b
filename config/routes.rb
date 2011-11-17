@@ -1,15 +1,21 @@
 FankuiB::Application.routes.draw do
 
+  resources :messages
+
   resources :solutions
 
   resources :cases
+
+  match 'good' => 'cases#good'
 
   get "search/index"
 
   get "session/follow"
   get "session/keep"
   
+
   get 'home/show'
+  get 'home/autocomplete_user_email'
   
   match 'ajax/new' => 'ajax#new'
   match 'ajax/edit' => 'ajax#edit'

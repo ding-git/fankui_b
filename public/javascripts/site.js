@@ -1,3 +1,4 @@
+
 function videoStateChanged(state)
 {
   if(state == 3 || state == 1)

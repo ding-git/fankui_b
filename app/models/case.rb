@@ -3,6 +3,8 @@
 class Case < ActiveRecord::Base
   
   belongs_to :user
+
+  belongs_to :forumdisplay
   
   has_many :solution
   

@@ -17,14 +17,12 @@
 <%= stylesheet_link_tag    "/stylesheets/base.css" %>
 <%= stylesheet_link_tag    "/stylesheets/index_style.css" %>
 
+<%= auto_discovery_link_tag(:rss, "/home/feed.rss") %>
+
+
   <%= csrf_meta_tags %>
 	<%= yield :colorbox %>
-	<script>
-		$(document).ready(function(){
-			//Examples of how to assign the ColorBox event to elements
-			$(".ajax").colorbox({ width:"50%"});
-		});
-	</script>
+
 </head>
 <body>
 
@@ -37,13 +35,7 @@
 		
 		<%= render 'shared/errors_messages' %>
 		
-		<% unless user_signed_in? || cookies[:notice] == 'flase' %>
-			<div class="none_signed_notice">
-				<p>亲爱的用户,您尚未登陆,可能无法使用所有功能</p>
-				<%= link_to (image_tag '/images/del.gif'), notice_false_path, :remote => true %>
-				<%= link_to '不再提示', notice_false_path, :remote => true %>
-			</div>
-		<% end %>
+		<%= none_signed? %>
 		<%= yield %>
 		
 	</div>

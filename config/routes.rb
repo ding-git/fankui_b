@@ -1,14 +1,17 @@
 FankuiB::Application.routes.draw do
 
+  resources :forumdisplays
+
   resources :messages
 
   resources :solutions
 
   resources :cases
 
+  resources :searches
+
   match 'good' => 'cases#good'
 
-  get "search/index"
 
   get "session/follow"
   get "session/keep"
@@ -16,6 +19,7 @@ FankuiB::Application.routes.draw do
 
   get 'home/show'
   get 'home/autocomplete_user_email'
+  get 'home/feed'
   
   match 'ajax/new' => 'ajax#new'
   match 'ajax/edit' => 'ajax#edit'
@@ -36,8 +40,10 @@ FankuiB::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  devise_for :users
-  
+  devise_for :users, :controllers => { :invitations => 'user/invitations' }
+
+  resources :invitations
+
   resources :users do
     member do
       get "followers"

@@ -1,5 +1,7 @@
+
+
 <% [:notice, :alert, :error].each do |key| %>
 	<% if flash[key] %>
-		<div class="<%= key %>"><%= flash[key] %></div>
+		<div class="<%= key %>" id="erros_messages"><%= flash[key] %></div>
 	<% end %>
 <% end %>

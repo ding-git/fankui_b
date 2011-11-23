@@ -45,28 +45,25 @@ $(function () {
 
 
 
+<% @forum.each do |forum| %>
+
 <div class="actions_wrapper">
 
 	<ul class="content_actions">
-		项目历史</br>
+		<%= forum.title %>
 	</ul>
 	<ul class="content_bctions">
 		<table>
 		  <tr>
 		    <th>Title</th>
-		    <th>Level</th>
-		    <th>Product</th>
-		    <th>Project</th>
 		    <th>Deadline</th>
 		    <th>User</th>
 		  </tr>
 
-		<% @presents.each do | view | %>
+		<% forum.case.each do | view | %>
 		  <tr>
+			<td><%= format("%05d",view.id) %></td>
 		    <td><%= link_to view.title,view %></td>
-		    <td><%= view.level_string %></td>
-		    <td><%= view.product %></td>
-		    <td><%= view.project %></td>
 		    <td><%= view.deadline %></td>
 		    <td><%= view.user.email %></td>
 		    <td><%= (view.created_at. + 8.hour).to_s(:db) %></td>
@@ -75,6 +72,8 @@ $(function () {
 		</table>
 	</ul>
 </div>
+
+<% end %>
 </br>
 
 

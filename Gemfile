@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
+gem 'rails', '3.1.1'
 
 gem 'mysql2'
 
@@ -11,6 +11,9 @@ gem 'rails3-jquery-autocomplete'
 
 #用户
 gem 'devise'
+
+#邀请用户
+gem 'devise_invitable'
 
 #编辑框
 gem 'ckeditor'

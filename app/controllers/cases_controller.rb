@@ -18,6 +18,9 @@ class CasesController < InheritedResources::Base
     if params[:resolve]
     @presents = Present.find(:all, :conditions => "resolve = #{params[:resolve]}")
     end
+    
+    @forum = Forumdisplay.all
+    
   end
 
   def good

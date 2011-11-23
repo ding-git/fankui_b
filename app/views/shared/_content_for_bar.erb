@@ -1,13 +1,13 @@
 <% content_for :bar do %>
 <% if user_signed_in? %>
 <li class="active">
-	<a href="/">最新事件</a>
+	<a href="/">首页</a>
 </li>
-	<li class="active">
-		<%= link_to '提交问题', presents_path %>
-	</li>	
 <li class="active">
-	<%= link_to '查看报告', '/admin' %>
+		<%= link_to '家庭 | 个人', cases_path %>
+</li>
+<li class="active">
+	<%= link_to '商务 | 工作', cases_path %>
 </li>
 <li class="active">
 	<%= link_to '帮助', '/admin' %>

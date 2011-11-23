@@ -29,4 +29,10 @@ module ApplicationHelper
     
   end
   
+  def none_signed?
+    unless user_signed_in? || cookies[:notice] == 'flase'
+      render 'shared/none_signed'
+    end
+  end
+  
 end

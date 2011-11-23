@@ -1,3 +1,4 @@
+# coding: utf-8
 class UsersController < ApplicationController
   before_filter :authenticate_user!
   
@@ -23,6 +24,11 @@ class UsersController < ApplicationController
   end
   
   def messages
+
+    # will_paginate custom label
+    WillPaginate::ViewHelpers.pagination_options[:previous_label] = '上一页'
+    WillPaginate::ViewHelpers.pagination_options[:next_label] = '下一页'
+    
     @messages = Message.where('msgfrom_id = ? OR msg_to_id = ?',params[:id],params[:id]).order('created_at DESC').paginate(:page => params[:page], :per_page => 10)
     
     @message = Message.new

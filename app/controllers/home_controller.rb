@@ -24,5 +24,12 @@ class HomeController < ApplicationController
     Delayed::Job.enqueue MailingJob.new()
   end
 
+  def feed
+    @cases = Case.all(:select => "title, id,description, updated_at", :order => "updated_at DESC", :limit => 20)
+
+    respond_to do |format|
+      format.rss { render :layout => false } #index.rss.builder
+    end
+  end
 
 end

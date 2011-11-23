@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111117010839) do
+ActiveRecord::Schema.define(:version => 20111122063055) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(:version => 20111117010839) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "request_ip"
+    t.integer  "forumdisplay_id"
   end
 
   create_table "ckeditor_assets", :force => true do |t|
@@ -87,6 +88,12 @@ ActiveRecord::Schema.define(:version => 20111117010839) do
   end
 
   add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
+
+  create_table "forumdisplays", :force => true do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "messages", :force => true do |t|
     t.integer  "msgfrom_id"
@@ -128,6 +135,12 @@ ActiveRecord::Schema.define(:version => 20111117010839) do
     t.string   "request_ip"
   end
 
+  create_table "searches", :force => true do |t|
+    t.string   "keywords"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "solutions", :force => true do |t|
     t.integer  "case_id"
     t.integer  "user_id"
@@ -143,7 +156,7 @@ ActiveRecord::Schema.define(:version => 20111117010839) do
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "",  :null => false
-    t.string   "encrypted_password",     :limit => 128, :default => "",  :null => false
+    t.string   "encrypted_password",     :limit => 128, :default => ""
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -157,9 +170,13 @@ ActiveRecord::Schema.define(:version => 20111117010839) do
     t.string   "name"
     t.string   "people"
     t.string   "admin",                                 :default => "0"
+    t.string   "invitation_token",       :limit => 60
+    t.datetime "invitation_sent_at"
+    t.datetime "invitation_accepted_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["invitation_token"], :name => "index_users_on_invitation_token"
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
 end
